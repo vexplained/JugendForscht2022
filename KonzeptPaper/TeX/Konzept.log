@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.30)  30 OCT 2022 21:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.30)  30 OCT 2022 22:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Levin/Schule/JugendForscht/KonzeptPaper/Konzept.tex
-(c:/Levin/Schule/JugendForscht/KonzeptPaper/Konzept.tex
+**c:/Levin/Schule/JugendForscht/KonzeptPaper/TeX/Konzept.tex
+(c:/Levin/Schule/JugendForscht/KonzeptPaper/TeX/Konzept.tex
 LaTeX2e <2022-06-01> patch level 5
 L3 programming layer <2022-10-26> (c:/texlive/2022/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
@@ -274,25 +274,30 @@ Package hyperref Info: Link coloring OFF on input line 10.
 \@outlinefile=\write3
 \openout3 = `Konzept.out'.
 
- [1
+
+Overfull \hbox (27.92207pt too wide) in paragraph at lines 14--19
+\OT1/cmr/m/n/12 Dazu kommt die Berech-nung des Ab-standes von Sen-sor (zum Beispiel Handymikro-
+ []
+
+[1
 
 {c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./Konzept.aux)
 Package rerunfilecheck Info: File `Konzept.out' has not changed.
-(rerunfilecheck)             Checksum: 5094E4EB7061D518F6AABF96528EC15D;93.
+(rerunfilecheck)             Checksum: 4539C136B30890D96369A9BB1949266D;149.
  ) 
 Here is how much of TeX's memory you used:
- 8873 strings out of 475066
- 139587 string characters out of 5782772
- 482608 words of memory out of 5000000
- 30189 multiletter control sequences out of 15000+600000
- 472163 words of font info for 38 fonts, out of 8000000 for 9000
+ 8870 strings out of 475066
+ 139563 string characters out of 5782772
+ 482609 words of memory out of 5000000
+ 30187 multiletter control sequences out of 15000+600000
+ 471826 words of font info for 37 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,6n,77p,303b,433s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on Konzept.pdf (1 page, 43393 bytes).
+ 72i,6n,77p,307b,435s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+Output written on Konzept.pdf (1 page, 40038 bytes).
 PDF statistics:
- 39 PDF objects out of 1000 (max. 8388607)
- 27 compressed objects within 1 object stream
+ 33 PDF objects out of 1000 (max. 8388607)
+ 23 compressed objects within 1 object stream
  3 named destinations out of 1000 (max. 500000)
  9 words of extra memory for PDF output out of 10000 (max. 10000000)
 
