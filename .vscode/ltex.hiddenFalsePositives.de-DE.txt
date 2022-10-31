@@ -1,0 +1,4 @@
+{"rule":"DE_CASE","sentence":"^\\Q[R]Konzept [R] [L]Erstellt:\\E$"}
+{"rule":"DE_CASE","sentence":"^\\Q[R]Konzept [R] [C] [L]Erstellt:\\E$"}
+{"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qexternal\\E$"}
+{"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qcompat=1.18 external\\E$"}
