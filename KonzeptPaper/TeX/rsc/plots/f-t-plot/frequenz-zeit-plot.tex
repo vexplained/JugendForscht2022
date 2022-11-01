@@ -1,0 +1,33 @@
+% if tikzpicture not working: https://tex.stackexchange.com/a/541385
+
+%Here begins the 2D plot
+\begin{tikzpicture}
+    \begin{axis}
+        \addplot[color=red]{sin(deg(x))};
+    \end{axis}
+\end{tikzpicture}
+%Here ends the 2D plot
+\hskip 5pt
+%Here begins the 3D plot
+\begin{tikzpicture}
+    \begin{axis}
+        [
+            xmin=-10,
+            xmax=10,
+            ymin=-10,
+            ymax=10,
+            zmin=-4,
+            zmax=4,
+        ]
+        \addplot3
+        [
+            surf,
+            domain=-10:10,
+            samples=50,
+        ]
+        {
+            cos(deg(sqrt(x^2+y^2)))
+        };
+    \end{axis}
+\end{tikzpicture}
+%Here ends the 3D plot

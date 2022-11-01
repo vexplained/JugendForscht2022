@@ -13,11 +13,17 @@
 \usepackage[utf8]{inputenc} % Umlaut-Unterstützung
 \usepackage[T1]{fontenc} % Umlaut-Unterstützung für Silbentrennung
 
+%args: x1, y1, x2, y2
+\newcommand{\pointdist}[4]{sqrt((#3-#1)^2+(#4-#2)^2)}
+
 \pgfplotsset{compat=1.18}
 % optimize pgfplots compilation: export plot, then import into document to
 % prevent unnecessary recompilation
 \usepgfplotslibrary{groupplots, external}
 \tikzexternalize[prefix=cache/]
+% import additional tikz libraries (for plotting)
+\usetikzlibrary{calc}
+
 
 \setlength{\headheight}{15pt}
 \addtolength{\topmargin}{-10pt}
@@ -56,24 +62,7 @@ Frequenz-Zeit-Diagramm), sondern fließend. Über die Änderungsgeschwindigkeit
 kann somit der genannte Abstand ermittelt werden.
 
 \subsection{Graph der Frequenz über Zeit}
-%Here begins the 2D plot
-\begin{tikzpicture}
-    \begin{axis}
-        \addplot[color=red]{exp(x)};
-    \end{axis}
-\end{tikzpicture}
-%Here ends the 2D plot
-\hskip 5pt
-%Here begins the 3D plot
-\begin{tikzpicture}
-    \begin{axis}
-        \addplot3[
-            surf,
-        ]
-        {exp(-x^2-y^2)*x};
-    \end{axis}
-\end{tikzpicture}
-%Here ends the 3D plot
-% \import{rsc/plots/}{frequenz-zeit-plot.tex}
+% \import{rsc/plots/f-t-plot/}{frequenz-zeit-plot.tex}
+\import{rsc/plots/circular-wave/}{circular-wave-decay.tex}
 
 \end{document}

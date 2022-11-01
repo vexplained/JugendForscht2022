@@ -1,0 +1,58 @@
+% \begin{tikzpicture}
+%     % \coordinate (O) at (0, 0);
+%     \def\wsrcx{0}
+%     \def\wsrcy{0}
+%     \def\wtime{1}
+%     \def\wlambda{5}
+%     \def\wk{2 * pi / \wavelength}
+%     \def\womega{pi / 2}
+%     \def\wphi{0}
+%     \def\wamp{3}
+
+%     \begin{axis}
+% [
+%     xmin=-10,
+%     xmax=10,
+%     ymin=-10,
+%     ymax=10,
+%     zmin=-4,
+%     zmax=4,
+% ]
+%         \addplot3 [surf]
+%         {(\wamp * cos(
+%             \wk * \pointdist{\wsrcx}{\wsrcy}{x}{y}
+%             - \womega * \wtime + \wphi
+%             )
+%             ) / (
+%             \pointdist{\wsrcx}{\wsrcy}{x}{y}
+%             )
+%         };
+%     \end{axis}
+% \end{tikzpicture}
+
+
+\begin{tikzpicture}
+    \def\wsrcx{0}
+    \def\wsrcy{0}
+
+    \begin{axis}
+        [
+            view={40}{50},
+            xmin=-10,
+            xmax=10,
+            ymin=-10,
+            ymax=10,
+            zmin=-3,
+            zmax=3,
+        ]
+        \addplot3
+        [
+            surf,
+            domain=-10:10,
+            samples=50,
+        ]
+        {
+            cos(deg(\pointdist{\wsrcx}{\wsrcy}{x}{y}))
+        };
+    \end{axis}
+\end{tikzpicture}
