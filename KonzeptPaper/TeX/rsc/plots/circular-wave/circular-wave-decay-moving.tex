@@ -1,0 +1,59 @@
+\begin{tikzpicture}
+    [
+        declare function={
+                dist(\x, \y) = sqrt(\x^2 + \y^2);
+                a(\x, \y) = sin(deg(\wk * dist(\x, \y) - \womega * \wtime + \wphi));
+                adecay(\x, \y) = \wamp * a(\x, \y) / dist(\x, \y)
+                ;
+                winkel(\x, \y) =
+                and(\x >= 0, \y >= 0) * (rad(atan(\y / \x))) +
+                (\x < 0) * (pi + rad(atan(\y / \x))) +
+                and(\x >= 0, \y < 0) * (2 * pi + rad(atan(\y / \x)))
+                ;
+                cscale(\x, \y) = rad(sin(deg(winkel(\x, \y)))) + 2;
+                b(\x, \y) = a(\x * cscale(\x, \y), \y * cscale(\x, \y));
+                bdecay(\x, \y) = adecay(\x * cscale(\x, \y), \y * cscale(\x, \y));
+            }
+    ]
+
+    \def\wtime{1}
+    \def\wlambda{5}
+    \def\wk{2 * pi / \wlambda}
+    \def\womega{2}
+    \def\wphi{0}
+    \def\wamp{3}
+
+    \def\xydomain{15}
+
+    \begin{axis}
+        [
+            xlabel={$x$},
+            ylabel={$y$},
+            zlabel={Amplitude},
+            title={Ausbreitung einer Schallwelle im Raum},
+            % colorbar,
+            colormap/PuOr,
+            % view={40}{50},
+            view/v=35, % only change vert rotation
+            xmin=-\xydomain,
+            xmax=\xydomain,
+            ymin=-\xydomain,
+            ymax=\xydomain,
+            % zmin=-1,
+            % zmax=8,
+            zmin=0,
+            zmax=6,
+        ]
+        \addplot3
+        [
+            surf,
+            domain=-\xydomain:\xydomain,
+            samples=20,
+            % samples=60,
+            % shader=faceted interp,
+        ]
+        {
+            winkel(x, y)
+        };
+    \end{axis}
+\end{tikzpicture}

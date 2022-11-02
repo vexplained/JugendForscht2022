@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.30)  2 NOV 2022 01:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.30)  2 NOV 2022 23:05
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -705,47 +705,49 @@ Package hyperref Info: Link coloring OFF on input line 48.
 
  [1
 
-{c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./rsc/plots/circular-wave/circular-wave-decay.tex
+{c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./rsc/plots/circular-wave/circular-wave-decay-moving.tex
 ===== Image 'cache/Konzept-figure0' is up-to-date. ======
-)
-Overfull \hbox (9.3844pt too wide) in paragraph at lines 50--79
-[][]
- []
-
-(./rsc/plots/f-t-plot/frequenz-zeit-plot.tex
+) (./rsc/plots/circular-wave/circular-wave-decay.tex
 ===== Image 'cache/Konzept-figure1' is up-to-date. ======
 )
-Overfull \hbox (41.18721pt too wide) in paragraph at lines 3--98
+Overfull \hbox (9.3844pt too wide) in paragraph at lines 50--81
 [][]
  []
 
-[2
+[2 <./cache/Konzept-figure0.pdf>] (./rsc/plots/f-t-plot/frequenz-zeit-plot.tex
+===== Image 'cache/Konzept-figure2' is up-to-date. ======
+)
+Overfull \hbox (41.18721pt too wide) in paragraph at lines 3--100
+[][]
+ []
+
+[3
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.107 
-       <./cache/Konzept-figure0.pdf>] [3
+l.115 \subsubsection
+                    *{Abstand \(d > 0\)}
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.116 \end{document}
-                     <./cache/Konzept-figure1.pdf>] (./Konzept.aux)
+l.115 \subsubsection
+                    *{Abstand \(d > 0\)} <./cache/Konzept-figure1.pdf> <./cache/Konzept-figure2.pdf>] [4] (./Konzept.aux)
 Package rerunfilecheck Info: File `Konzept.out' has not changed.
 (rerunfilecheck)             Checksum: BAC73B9C8CE1313FE624FA9751DCE547;728.
  ) 
 Here is how much of TeX's memory you used:
- 35819 strings out of 475066
- 854253 string characters out of 5782772
- 1482962 words of memory out of 5000000
- 56611 multiletter control sequences out of 15000+600000
+ 35826 strings out of 475066
+ 854530 string characters out of 5782772
+ 1480963 words of memory out of 5000000
+ 56613 multiletter control sequences out of 15000+600000
  480882 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,11n,103p,1104b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on Konzept.pdf (3 pages, 6895008 bytes).
+Output written on Konzept.pdf (4 pages, 6915802 bytes).
 PDF statistics:
- 14143 PDF objects out of 15390 (max. 8388607)
- 7075 compressed objects within 71 object streams
- 14 named destinations out of 1000 (max. 500000)
- 63 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 14165 PDF objects out of 15390 (max. 8388607)
+ 7091 compressed objects within 71 object streams
+ 15 named destinations out of 1000 (max. 500000)
+ 68 words of extra memory for PDF output out of 10000 (max. 10000000)
 
