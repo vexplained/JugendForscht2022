@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.30)  1 NOV 2022 21:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.30)  2 NOV 2022 00:35
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -561,14 +561,21 @@ Package: fancyhdr 2022/05/18 v4.0.3 Extensive control of page headers and footer
 \f@nch@O@erf=\skip62
 \f@nch@O@olf=\skip63
 \f@nch@O@orf=\skip64
+) (c:/texlive/2022/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count357
+\float@exts=\toks41
+\float@box=\box65
+\@float@everytoks=\toks42
+\@floatcapt=\box66
 ) (c:/texlive/2022/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
 (c:/texlive/2022/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count357
-\Gm@cntv=\count358
-\c@Gm@tempcnt=\count359
+\Gm@cnth=\count358
+\Gm@cntv=\count359
+\c@Gm@tempcnt=\count360
 \Gm@bindingoffset=\dimen277
 \Gm@wd@mp=\dimen278
 \Gm@odd@mp=\dimen279
@@ -577,17 +584,17 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layoutheight=\dimen282
 \Gm@layouthoffset=\dimen283
 \Gm@layoutvoffset=\dimen284
-\Gm@dimlist=\toks41
+\Gm@dimlist=\toks43
 ) (c:/texlive/2022/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
-\inpenc@prehook=\toks42
-\inpenc@posthook=\toks43
+\inpenc@prehook=\toks44
+\inpenc@posthook=\toks45
 ) (c:/texlive/2022/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 ) (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.groupplots.code.tex
-\pgfplots@group@current@plot=\count360
-\pgfplots@group@current@row=\count361
-\pgfplots@group@current@column=\count362
+\pgfplots@group@current@plot=\count361
+\pgfplots@group@current@row=\count362
+\pgfplots@group@current@column=\count363
 (c:/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
 File: tikzlibrarycalc.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )) (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.external.code.tex (c:/texlive/2022/texmf-dist/tex/latex/pgf/frontendlayer/libraries/tikzlibraryexternal.code.tex (c:/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzexternalshared.code.tex)))
@@ -596,43 +603,43 @@ No auxiliary output files.
 \w@pgfexternal@auxout=\write4
 Package TikZ externalization: calling \geometry{driver=none} during externalization.
 
-(c:/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+(c:/texlive/2022/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.polar.code.tex) (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.patchplots.code.tex) (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.colorbrewer.code.tex (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarycolorbrewer.code.tex)) (c:/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-10-26 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count363
-\l__pdf_internal_box=\box65
+\l__color_backend_stack_int=\count364
+\l__pdf_internal_box=\box67
 )
 No file cache/Konzept-figure0.aux.
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
 (c:/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count364
+\scratchcounter=\count365
 \scratchdimen=\dimen285
-\scratchbox=\box66
-\nofMPsegments=\count365
-\nofMParguments=\count366
-\everyMPshowfont=\toks44
-\MPscratchCnt=\count367
+\scratchbox=\box68
+\nofMPsegments=\count366
+\nofMParguments=\count367
+\everyMPshowfont=\toks46
+\MPscratchCnt=\count368
 \MPscratchDim=\dimen286
-\MPnumerator=\count368
-\makeMPintoPDFobject=\count369
-\everyMPtoPDFconversion=\toks45
+\MPnumerator=\count369
+\makeMPintoPDFobject=\count370
+\everyMPtoPDFconversion=\toks47
 ) (c:/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 (c:/texlive/2022/texmf-dist/tex/latex/grfext/grfext.sty
@@ -646,7 +653,7 @@ Package grfext Info: Graphics extension search list:
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 \providecommand\hyper@newdestlabel[2]{}
-Package hyperref Info: Link coloring OFF on input line 44.
+Package hyperref Info: Link coloring OFF on input line 47.
 Package pgfplots notification 'compat/show suggested version=true': document has been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
 *geometry* detected driver: <none>
@@ -687,20 +694,147 @@ Package pgfplots notification 'compat/show suggested version=true': document has
 
 [1
 
-{c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]) ) 
+{c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}])
+Underfull \hbox (badness 10000) in paragraph at lines 76--76
+[]\T1/cmr/m/n/12 Info:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--76
+\T1/cmr/m/n/12 Die
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--76
+\T1/cmr/m/n/12 Gra-fik
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--76
+\T1/cmr/m/n/12 ba-siert
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--76
+\T1/cmr/m/n/12 nicht
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--76
+\T1/cmr/m/n/12 auf
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--76
+\T1/cmr/m/n/12 phy-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--76
+\T1/cmr/m/n/12 si-ka-li-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--76
+\T1/cmr/m/n/12 schen
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--76
+\T1/cmr/m/n/12 Ge-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--76
+\T1/cmr/m/n/12 set-zen
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--76
+\T1/cmr/m/n/12 und
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--76
+\T1/cmr/m/n/12 ist
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--76
+\T1/cmr/m/n/12 so-mit
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--76
+\T1/cmr/m/n/12 fach-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--76
+\T1/cmr/m/n/12 lich
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--76
+\T1/cmr/m/n/12 falsch.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--76
+\T1/cmr/m/n/12 Sie
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--76
+\T1/cmr/m/n/12 dient
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--76
+\T1/cmr/m/n/12 le-dig-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--76
+\T1/cmr/m/n/12 lich
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--76
+\T1/cmr/m/n/12 der
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--76
+\T1/cmr/m/n/12 Ver-an-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--76
+\T1/cmr/m/n/12 schau-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--76
+\T1/cmr/m/n/12 li-
+ []
+
+(./rsc/plots/f-t-plot/frequenz-zeit-plot.tex
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to disable this.
+) ) 
 Here is how much of TeX's memory you used:
- 33950 strings out of 475066
- 794434 string characters out of 5782772
- 2695878 words of memory out of 5000000
- 54795 multiletter control sequences out of 15000+600000
- 478657 words of font info for 51 fonts, out of 8000000 for 9000
+ 36446 strings out of 475066
+ 871473 string characters out of 5782772
+ 4522005 words of memory out of 5000000
+ 57268 multiletter control sequences out of 15000+600000
+ 479332 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 103i,11n,106p,1104b,2163s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on cache/Konzept-figure0.pdf (1 page, 96884 bytes).
+ 103i,15n,106p,1104b,2914s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on cache/Konzept-figure0.pdf (1 page, 6711686 bytes).
 PDF statistics:
- 26 PDF objects out of 1000 (max. 8388607)
- 18 compressed objects within 1 object stream
+ 14030 PDF objects out of 15390 (max. 8388607)
+ 6987 compressed objects within 70 object streams
  2 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 48747 words of extra memory for PDF output out of 51595 (max. 10000000)
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.30)  1 NOV 2022 19:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.30)  2 NOV 2022 00:44
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -561,14 +561,21 @@ Package: fancyhdr 2022/05/18 v4.0.3 Extensive control of page headers and footer
 \f@nch@O@erf=\skip62
 \f@nch@O@olf=\skip63
 \f@nch@O@orf=\skip64
+) (c:/texlive/2022/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count357
+\float@exts=\toks41
+\float@box=\box65
+\@float@everytoks=\toks42
+\@floatcapt=\box66
 ) (c:/texlive/2022/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
 (c:/texlive/2022/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count357
-\Gm@cntv=\count358
-\c@Gm@tempcnt=\count359
+\Gm@cnth=\count358
+\Gm@cntv=\count359
+\c@Gm@tempcnt=\count360
 \Gm@bindingoffset=\dimen277
 \Gm@wd@mp=\dimen278
 \Gm@odd@mp=\dimen279
@@ -577,17 +584,17 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layoutheight=\dimen282
 \Gm@layouthoffset=\dimen283
 \Gm@layoutvoffset=\dimen284
-\Gm@dimlist=\toks41
+\Gm@dimlist=\toks43
 ) (c:/texlive/2022/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
-\inpenc@prehook=\toks42
-\inpenc@posthook=\toks43
+\inpenc@prehook=\toks44
+\inpenc@posthook=\toks45
 ) (c:/texlive/2022/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 ) (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.groupplots.code.tex
-\pgfplots@group@current@plot=\count360
-\pgfplots@group@current@row=\count361
-\pgfplots@group@current@column=\count362
+\pgfplots@group@current@plot=\count361
+\pgfplots@group@current@row=\count362
+\pgfplots@group@current@column=\count363
 (c:/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
 File: tikzlibrarycalc.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )) (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.external.code.tex (c:/texlive/2022/texmf-dist/tex/latex/pgf/frontendlayer/libraries/tikzlibraryexternal.code.tex (c:/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzexternalshared.code.tex)))
@@ -596,43 +603,42 @@ No auxiliary output files.
 \w@pgfexternal@auxout=\write4
 Package TikZ externalization: calling \geometry{driver=none} during externalization.
 
-(c:/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+(c:/texlive/2022/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.polar.code.tex) (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.patchplots.code.tex) (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.colorbrewer.code.tex (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarycolorbrewer.code.tex)) (c:/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-10-26 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count363
-\l__pdf_internal_box=\box65
-)
-No file cache/Konzept-figure2.aux.
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
+\l__color_backend_stack_int=\count364
+\l__pdf_internal_box=\box67
+) (./Konzept.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
 (c:/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count364
+\scratchcounter=\count365
 \scratchdimen=\dimen285
-\scratchbox=\box66
-\nofMPsegments=\count365
-\nofMParguments=\count366
-\everyMPshowfont=\toks44
-\MPscratchCnt=\count367
+\scratchbox=\box68
+\nofMPsegments=\count366
+\nofMParguments=\count367
+\everyMPshowfont=\toks46
+\MPscratchCnt=\count368
 \MPscratchDim=\dimen286
-\MPnumerator=\count368
-\makeMPintoPDFobject=\count369
-\everyMPtoPDFconversion=\toks45
+\MPnumerator=\count369
+\makeMPintoPDFobject=\count370
+\everyMPtoPDFconversion=\toks47
 ) (c:/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 (c:/texlive/2022/texmf-dist/tex/latex/grfext/grfext.sty
@@ -646,7 +652,8 @@ Package grfext Info: Graphics extension search list:
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 \providecommand\hyper@newdestlabel[2]{}
-Package hyperref Info: Link coloring OFF on input line 38.
+Package hyperref Info: Link coloring OFF on input line 47.
+(./Konzept.out) (./Konzept.out)
 Package pgfplots notification 'compat/show suggested version=true': document has been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
 *geometry* detected driver: <none>
@@ -682,27 +689,34 @@ Package pgfplots notification 'compat/show suggested version=true': document has
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-(./rsc/plots/f-t-plot/frequenz-zeit-plot.tex
+(./rsc/plots/circular-wave/circular-wave-decay.tex
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to disable this.
+) (./rsc/plots/f-t-plot/frequenz-zeit-plot.tex
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to disable this.
-) (./rsc/plots/circular-wave/circular-wave-decay.tex
-\openout4 = `cache/Konzept-figure2.dpth'.
-
 )
-Runaway argument?
-\ifpgfmathfloat@scaleactive \expandafter \pgfmathfloatmultiply@ \expandafter \ETC.
-! File ended while scanning use of \pgfmathfloatparse@@.
-<inserted text> 
-                \par 
-l.60 ...s/circular-wave/}{circular-wave-decay.tex}
-                                                   
+\openout3 = `cache/Konzept-figure2.dpth'.
+
+
+! Package tikz Error: Sorry, image externalization failed: the resulting image was EMPTY. I tried to externalize 'cache/Konzept-figure2', but it seems there is no such image in the document!?  
+   You are currently using 'mode=convert with system call'. This problem can happen if the image (or one of the images preceding it) was declared inside of a \label{} (i.e. in the .aux file): 'convert with system call' has no access to the main aux file.
+   Possible solutions in this case:
+   (a) Try using 'mode=list and make',
+   (b) Issue the externalization command 'pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname "cache/Konzept-figure2" "\def\tikzexternalrealjob{Konzept}\input{Konzept}"' *manually* (also check the preceding externalized images, perhaps the file name sequence is not correct).
+   Repeat: the resulting image was EMPTY, your attention is required .
+
+See the tikz package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.105 \end{document}
+                     
 Here is how much of TeX's memory you used:
- 33671 strings out of 475066
- 786945 string characters out of 5782772
- 1252055 words of memory out of 5000000
- 54513 multiletter control sequences out of 15000+600000
- 479332 words of font info for 52 fonts, out of 8000000 for 9000
+ 35760 strings out of 475066
+ 853897 string characters out of 5782772
+ 1483075 words of memory out of 5000000
+ 56576 multiletter control sequences out of 15000+600000
+ 480781 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 103i,6n,106p,1104b,1459s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 103i,6n,106p,1104b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 !  ==> Fatal error occurred, no output PDF file produced!

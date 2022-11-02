@@ -4,25 +4,42 @@
 %     \def\wsrcy{0}
 %     \def\wtime{1}
 %     \def\wlambda{5}
-%     \def\wk{2 * pi / \wavelength}
+%     \def\wk{2 * pi / \wlambda}
 %     \def\womega{pi / 2}
 %     \def\wphi{0}
 %     \def\wamp{3}
 
+%     \def\xydomain{15}
+
 %     \begin{axis}
-% [
-%     xmin=-10,
-%     xmax=10,
-%     ymin=-10,
-%     ymax=10,
-%     zmin=-4,
-%     zmax=4,
-% ]
-%         \addplot3 [surf]
-%         {(\wamp * cos(
+%         [
+%             xlabel={$x$},
+%             ylabel={$y$},
+%             zlabel={Amplitude},
+%             title={Ausbreitung einer Schallwelle im Raum},
+%             % colorbar,
+%             colormap/PuOr,
+%             % view={40}{50},
+%             view/v=60, % only change vert rotation
+%             xmin=-\xydomain,
+%             xmax=\xydomain,
+%             ymin=-\xydomain,
+%             ymax=\xydomain,
+%             zmin=-1,
+%             zmax=3,
+%         ]
+%         \addplot3
+%         [
+%             surf,
+%             domain=-\xydomain:\xydomain,
+%             samples=60,
+%             shader=faceted interp,
+%         ]
+%         {
+%             (\wamp * cos(deg(
 %             \wk * \pointdist{\wsrcx}{\wsrcy}{x}{y}
 %             - \womega * \wtime + \wphi
-%             )
+%             ))
 %             ) / (
 %             \pointdist{\wsrcx}{\wsrcy}{x}{y}
 %             )
@@ -30,29 +47,52 @@
 %     \end{axis}
 % \end{tikzpicture}
 
-
 \begin{tikzpicture}
+    % \coordinate (O) at (0, 0);
     \def\wsrcx{0}
     \def\wsrcy{0}
+    \def\wtime{1}
+    \def\wlambda{5}
+    \def\wk{2 * pi / \wlambda}
+    \def\womega{pi / 2}
+    \def\wphi{0}
+    \def\wamp{3}
+    \def\wj{-0.65}
+
+    \def\xydomain{15}
 
     \begin{axis}
         [
-            view={40}{50},
-            xmin=-10,
-            xmax=10,
-            ymin=-10,
-            ymax=10,
-            zmin=-3,
+            xlabel={$x$},
+            ylabel={$y$},
+            zlabel={Amplitude},
+            title={Ausbreitung einer Schallwelle im Raum},
+            % colorbar,
+            colormap/PuOr,
+            % view={40}{50},
+            view/v=60, % only change vert rotation
+            xmin=-\xydomain,
+            xmax=\xydomain,
+            ymin=-\xydomain,
+            ymax=\xydomain,
+            zmin=-1,
             zmax=3,
         ]
         \addplot3
         [
             surf,
-            domain=-10:10,
-            samples=50,
+            domain=-\xydomain:\xydomain,
+            samples=60,
+            shader=faceted interp,
         ]
         {
-            cos(deg(\pointdist{\wsrcx}{\wsrcy}{x}{y}))
+            (\wamp * cos(deg(\wk
+            * sqrt(((1 - (abs(x) * \wj / x)) * (\wsrcx - x)^2) + (\wsrcy - y)^2)
+            - \womega * \wtime + \wphi
+            ))
+            ) / (
+            \pointdist{\wsrcx}{\wsrcy}{x}{y}
+            )
         };
     \end{axis}
 \end{tikzpicture}
