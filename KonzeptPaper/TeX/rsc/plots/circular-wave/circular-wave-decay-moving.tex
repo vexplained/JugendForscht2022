@@ -1,59 +1,60 @@
+% arara: lualatex
+% TODO https://tex.stackexchange.com/questions/136658/how-to-make-pdflatex-multithreaded-when-shell-escape-is-enabled
 \begin{tikzpicture}
     [
         declare function={
-                dist(\x, \y) = sqrt(\x^2 + \y^2);
-                a(\x, \y) = sin(deg(\wk * dist(\x, \y) - \womega * \wtime + \wphi));
-                adecay(\x, \y) = \wamp * a(\x, \y) / dist(\x, \y)
+                %! IMPORTANT: NO space between function arguments (in front paranthesis)
+                distcent(\x,\y) = sqrt(\x^2 + \y^2);
+                a(\x,\y) = sin(deg(\wk * distcent(\x, \y) - \womega * \wtime + \wphi));
+                adecay(\x, \y) = \wamp * a(\x, \y) / distcent(\x, \y)
                 ;
-                winkel(\x, \y) =
+                winkel(\x,\y) =
                 and(\x >= 0, \y >= 0) * (rad(atan(\y / \x))) +
                 (\x < 0) * (pi + rad(atan(\y / \x))) +
                 and(\x >= 0, \y < 0) * (2 * pi + rad(atan(\y / \x)))
                 ;
-                cscale(\x, \y) = rad(sin(deg(winkel(\x, \y)))) + 2;
-                b(\x, \y) = a(\x * cscale(\x, \y), \y * cscale(\x, \y));
-                bdecay(\x, \y) = adecay(\x * cscale(\x, \y), \y * cscale(\x, \y));
+                cscale(\x,\y) = cos(deg(winkel(\x, \y))) + 2;
+                b(\x,\y) = a(\x * cscale(\x, \y), \y * cscale(\x, \y));
+                bdecay(\x,\y) = adecay(\x * cscale(\x, \y), \y * cscale(\x, \y));
             }
     ]
 
-    \def\wtime{1}
-    \def\wlambda{5}
+    \def\wtime{14}
+    \def\wlambda{15}
     \def\wk{2 * pi / \wlambda}
-    \def\womega{2}
+    \def\womega{1}
     \def\wphi{0}
     \def\wamp{3}
 
-    \def\xydomain{15}
+    \def\xydomain{25}
 
     \begin{axis}
         [
             xlabel={$x$},
             ylabel={$y$},
             zlabel={Amplitude},
-            title={Ausbreitung einer Schallwelle im Raum},
             % colorbar,
             colormap/PuOr,
             % view={40}{50},
             view/v=35, % only change vert rotation
-            xmin=-\xydomain,
-            xmax=\xydomain,
+            xmin=-\xydomain-15,
+            xmax=\xydomain-5,
             ymin=-\xydomain,
             ymax=\xydomain,
-            % zmin=-1,
-            % zmax=8,
-            zmin=0,
-            zmax=6,
+            zmin=-2,
+            zmax=4,
         ]
         \addplot3
         [
             surf,
-            domain=-\xydomain:\xydomain,
-            samples=20,
-            % samples=60,
-            % shader=faceted interp,
+            x domain=-40:20,
+            y domain=-30:30,
+            % samples=30,
+            samples=60,
+            shader=faceted interp,
         ]
         {
-            winkel(x, y)
+            b(x,y)
         };
     \end{axis}
 \end{tikzpicture}

@@ -3,3 +3,8 @@
 {"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qexternal\\E$"}
 {"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qcompat=1.18 external\\E$"}
 {"rule":"GERMAN_SPELLER_RULE","sentence":"^\\Q5pt\\E$"}
+{"rule":"DE_CASE","sentence":"^\\Q[R]Konzept [R] [C] [L] Erstellt:\\E$"}
+{"rule":"DOPPELTE_SATZZEICHEN","sentence":"^\\QHeuchlingen, .\\E$"}
+{"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qexpandafter .\\E$"}
+{"rule":"COMMA_PARENTHESIS_WHITESPACE","sentence":"^\\Qexpandafter .\\E$"}
+{"rule":"GERMAN_SPELLER_RULE","sentence":"^\\Q=1 mm Gm.showframe=false.\\E$"}

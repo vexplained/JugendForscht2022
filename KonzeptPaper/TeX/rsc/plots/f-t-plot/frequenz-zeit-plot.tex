@@ -24,7 +24,6 @@
 
     \begin{axis}
         [
-            title={Frequenzverlauf bei vorbeifahrenden Fahrzeug},
             xlabel={Zeit $t$ [s]},
             ylabel={Frequenz $f$ [Hz]},
             xmin=0,
@@ -40,19 +39,19 @@
         {
             \fnord - func_1(x-\xydomain)
         }
-        node [pos=0.85, above] (a) {$y=f(t)$}
+        node [pos=0.85, above] (a) {$y=f_{fern}(t)$}
         ;
         \addplot
         [
-            color=blue,
-            thick,
-            domain=0:2*\xydomain,
-            samples=120,
+        color=blue,
+        thick,
+        domain=0:2*\xydomain,
+        samples=120,
         ]
         {
-            \fnord - func_0(x-\xydomain)
+        \fnord - func_0(x-\xydomain)
         }
-        node [above = 0.1cm of a] {$y=f(t)$}
+        node [above = 0.1cm of a] {$y=f_{nah}(t)$}
         ;
         \addplot
         [

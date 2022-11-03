@@ -1,3 +1,0 @@
-u(x,y)=((A cos(k sqrt((x(P_{Src})-x)^(2)+(y(P_{Src})-y)^(2))-ω t+φ))/(sqrt((x(P_{Src})-x)^(2)+(y(P_{Src})-y)^(2))))
-
-https://lampx.tugraz.at/~hadley/physikm/script/waves/circular2d.en.php
