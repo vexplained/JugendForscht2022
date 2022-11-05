@@ -9,7 +9,6 @@
 % Links auf Gleitumgebungen springen nicht zur Beschriftung,
 % sondern zum Anfang der Gleitumgebung
 \usepackage[figure]{hypcap}
-\usepackage{cleveref}
 \usepackage{fancyhdr}
 \usepackage{float}
 % limit floats to stay in their section
@@ -49,14 +48,21 @@
 \date{\today}
 
 \pagestyle{fancy}
-\fancyhead{} % reset everything
-\fancyfoot{} % reset everything
-\fancyhead[R]{Konzept}
+
+\renewcommand{\sectionmark}[1]{\markright{\thesection~- ~#1}}
+
+\fancyhf{} % reset everything
+\fancyhead[L]{\rightmark} % rightmark = current section; leftmark = current chapter
 \fancyfoot[C]{\thepage}
 % \fancyfoot[C]{\theauthor}
 \fancyfoot[L]{}
+
 \AtEndDocument{
+    \FloatBarrier
     \newpage
+
+    \thispagestyle{plain}
+
     \hfill
     \vfill
 
@@ -84,9 +90,15 @@
 
 \maketitle
 
+\newpage
+
+\thispagestyle{plain}
+
 \tableofcontents
 
 \newpage
+
+\thispagestyle{plain}
 
 \section{Zielsetzung und Idee}
 Es soll erforscht werden, wie durch die Analyse des Geräusches eines
@@ -110,48 +122,46 @@ kann somit der genannte Abstand ermittelt werden.
 
 \subsection{Ausbreitung von Schall}
 
-% \centering
-\import{rsc/plots/circular-wave/}{circular-wave-decay-moving.tex}
-
-\begin{figure}
+\begin{figure}[htbp]
     \centering
-    \import{rsc/plots/circular-wave/}{circular-wave-decay.tex}
+    \import{rsc/plots/circular-wave/}{circular-wave-decay-moving.tex}
     \caption{Gestauchte Welle}
+    \label{fig:3dwave_decay}
 \end{figure}
 
-\vspace{1cm}
-
-Bei Bewegung einer Schallquelle im Raum wird die Welle in Bewegungsrichtung vor
-der Quelle gestaucht, dahinter gestreckt. Die Stauchung und Streckung resultiert
-in einer Veränderung der Frequenz für einen feststehenden Empfänger.
+\autoref{fig:3dwave_decay} zeigt die Stauchung beziehungsweise Streckung einer
+Schallwelle bei sich bewegender Quelle. Dieser Effekt kann genutzt werden, um
+durch die Analyse des Frequenzunterschieds von gestauchter zu gestreckter Welle
+die Bewegungsgeschwindigkeit der Quelle zu berechnen, unabhängig der
+Erregerfrequenz.
 
 \FloatBarrier
 \subsection{Beispielhafter Frequenzverlauf}
 
-\begin{figure}
+\begin{figure}[htbp]
     \centering
     \import{rsc/plots/f-t-plot/}{frequenz-zeit-plot.tex}
     \caption{Frequenzverlauf bei vorbeifahrendem Fahrzeug}
     \label{fig:frequencyplot}
-    \vspace{5mm}
-    \begin{minipage}{11cm}
-        \begin{footnotesize}
-            \emph{
-                Information: Die Grafik basiert nicht auf physikalischen
-                Gesetzen und ist somit fachlich falsch. Sie dient lediglich
-                der Veranschaulichung.
-            }
-        \end{footnotesize}
-    \end{minipage}
+    % \vspace{5mm}
+    % \begin{minipage}{11cm}
+    %     \begin{footnotesize}
+    %         \emph{
+    %             Information: Die Grafik basiert nicht auf physikalischen
+    %             Gesetzen und ist somit fachlich falsch. Sie dient lediglich
+    %             der Veranschaulichung.
+    %         }
+    %     \end{footnotesize}
+    % \end{minipage}
 \end{figure}
-
-\vspace{1cm}
 
 \subsubsection*{Abstand \(d = 0\)}
 Die Frequenzänderung geschieht ohne Übergang. Der arithmetische Mittelwert aus
 hoher und tiefer Frequenz stellt die tatsächliche Frequenz dar, die die
 Schallquelle aussendet. Für den Frequenzverlauf siehe bei
 \autoref{fig:frequencyplot} den Graphen der Funktion \(f_{fern}(x)\).
+Rechnerisch resultiert ein Abstand von Quelle und Sensor in unendlich schneller
+Änderung der Frequenz.
 
 \subsubsection*{Abstand \(d > 0\)}
 Die Frequenzänderung geschieht mit Übergang. Über den Verlauf des Übergangs kann

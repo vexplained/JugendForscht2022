@@ -6,7 +6,7 @@
                 %! IMPORTANT: NO space between function arguments (in front paranthesis)
                 distcent(\x,\y) = sqrt(\x^2 + \y^2);
                 a(\x,\y) = sin(deg(\wk * distcent(\x, \y) - \womega * \wtime + \wphi));
-                adecay(\x, \y) = \wamp * a(\x, \y) / distcent(\x, \y)
+                adecay(\x,\y) = \wamp * a(\x, \y) / sqrt(distcent(\x, \y)) %* info: added extra sqrt
                 ;
                 winkel(\x,\y) =
                 and(\x >= 0, \y >= 0) * (rad(atan(\y / \x))) +
@@ -15,46 +15,48 @@
                 ;
                 cscale(\x,\y) = cos(deg(winkel(\x, \y))) + 2;
                 b(\x,\y) = a(\x * cscale(\x, \y), \y * cscale(\x, \y));
-                bdecay(\x,\y) = adecay(\x * cscale(\x, \y), \y * cscale(\x, \y));
+                bdecay(\x,\y) = adecay(\x * cscale(\x,\y), \y * cscale(\x,\y));
             }
     ]
 
-    \def\wtime{14}
+    \def\wtime{13.4}
     \def\wlambda{15}
     \def\wk{2 * pi / \wlambda}
     \def\womega{1}
     \def\wphi{0}
-    \def\wamp{3}
+    \def\wamp{6}
 
-    \def\xydomain{25}
 
     \begin{axis}
         [
             xlabel={$x$},
             ylabel={$y$},
-            zlabel={Amplitude},
-            % colorbar,
+            colorbar,
+            colorbar style = {
+                    ylabel=Amplitude (Störung),
+                    ytick={-2, -1, ..., 3},
+                    align=right,
+                },
             colormap/PuOr,
             % view={40}{50},
-            view/v=35, % only change vert rotation
-            xmin=-\xydomain-15,
-            xmax=\xydomain-5,
-            ymin=-\xydomain,
-            ymax=\xydomain,
+            view/v=65, % only change vert rotation
+            xmin=-40,
+            xmax=20,
+            ymin=-30,
+            ymax=30,
             zmin=-2,
             zmax=4,
         ]
         \addplot3
         [
             surf,
-            x domain=-40:20,
-            y domain=-30:30,
-            % samples=30,
-            samples=60,
+            domain=-40:20,
+            domain y=-30:30,
+            samples=50,
             shader=faceted interp,
         ]
         {
-            b(x,y)
+            bdecay(x,y)
         };
     \end{axis}
 \end{tikzpicture}
