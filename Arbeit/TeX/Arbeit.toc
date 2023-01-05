@@ -1,0 +1,12 @@
+\babel@toc {german}{}\relax 
+\contentsline {section}{Kurzfassung}{2}{section*.1}%
+\contentsline {section}{\numberline {1}Einleitung}{4}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Ideenfindung}{4}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Lösungsansatz \textbf {UMBENENNEN, da auch der Grund der Ausarbeitung hier genannt wird (da kostspielig usw.)???}}{4}{subsection.1.2}%
+\contentsline {section}{\numberline {2}Vorgehensweise, Materialien und Methode}{5}{section.2}%
+\contentsline {section}{\numberline {3}Analyse der Audiodaten via Dopplereffekt}{5}{section.3}%
+\contentsline {section}{\numberline {4}Ergebnisse}{5}{section.4}%
+\contentsline {section}{\numberline {5}Ergebnisdiskussion}{5}{section.5}%
+\contentsline {section}{\numberline {6}Zusammenfassung}{5}{section.6}%
+\contentsline {section}{\numberline {7}Quellen- und Literaturverzeichnis}{5}{section.7}%
+\contentsline {section}{\numberline {8}Unterstützungsleistungen}{5}{section.8}%
