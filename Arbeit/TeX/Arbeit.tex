@@ -4,7 +4,7 @@
 \usepackage{blindtext}
 \usepackage{titling}
 \usepackage{datetime}
-\usepackage{amsmath, graphicx, pgfplots}
+\usepackage{amsmath, pgfplots}
 \usepackage[hidelinks, breaklinks]{hyperref}
 % Links auf Gleitumgebungen springen nicht zur Beschriftung,
 % sondern zum Anfang der Gleitumgebung
@@ -15,8 +15,11 @@
 \usepackage[section]{placeins}
 \usepackage[top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm]{geometry}
 % \usepackage{showframe}
+\usepackage{xcolor}
 
-
+\usepackage{subcaption}
+\usepackage{graphicx}
+\graphicspath{{./rsc/img/(1)}{./rsc/img/(2)}}
 
 \usepackage[style=verbose-ibid,backend=bibtex]{biblatex}
 \addbibresource{\jobname.bib}
@@ -36,12 +39,13 @@
 \usetikzlibrary{calc, positioning}
 
 % import after tikz configuration
-\usepackage[textwidth=3.7cm]{todonotes}
+\usepackage[textwidth=3.7cm,german]{todonotes}
 \setlength{\marginparwidth}{3.7cm}
 % prevent tikz externalization of todo notes since this does not work together
 \makeatletter
 \renewcommand{\todo}[2][]{\tikzexternaldisable\@todo[#1]{#2}\tikzexternalenable}
 \makeatother
+\newcommand\draftred[1]{\textcolor{red}{#1}}
 
 
 % Debug-Anzeige von übervollen Boxen:
@@ -97,7 +101,10 @@
 
 \begin{document}
 
+\pagenumbering{Roman}
+
 \maketitle
+
 \begin{center}
     Jugend forscht
 
@@ -127,6 +134,9 @@
 
 \thispagestyle{plain}
 
+\cleardoublepage% ensures that the page numbering will change on a recto page
+\pagenumbering{arabic}
+
 \section{Einleitung}
 \input{sections/(1)Ideenfindung.tex}
 
@@ -138,6 +148,11 @@
 \section{Ergebnisdiskussion}
 
 \section{Zusammenfassung}
+
+\newpage
+
+\section{Abbildungsverzeichnis}
+\listoffigures
 
 \section{Quellen- und Literaturverzeichnis}
 
