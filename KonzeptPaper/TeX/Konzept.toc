@@ -1,6 +1,0 @@
-\babel@toc {german}{}\relax 
-\contentsline {section}{\numberline {1}Zielsetzung und Idee}{3}{section.1}%
-\contentsline {section}{\numberline {2}Ansatz}{3}{section.2}%
-\contentsline {section}{\numberline {3}Visualisierungen}{3}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Ausbreitung von Schall}{3}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Beispielhafter Frequenzverlauf}{3}{subsection.3.2}%

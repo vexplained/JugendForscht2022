@@ -4,5 +4,30 @@
             "path": "."
         }
     ],
-    "settings": {}
+    "settings": {
+        "files.exclude": {
+            /* TeX related files */
+            "**/TeX/**/*.log": true,
+            "**/*.synctex.gz": true,
+            "**/*.aux*": true,
+            "**/*.dvi": true,
+            "**/*.fdb_latexmk": true,
+            "**/*.fls": true,
+            "**/*.log": false,
+            "**/*.out": true,
+            "**/*.toc": true,
+            "**/*.xdv": true,
+            "**/*-figure*.md5": true,
+            /* BibTeX related files */
+            "**/*-blx.bib": true,
+            "**/*.bcf": true,
+            "**/*.bbl": true,
+            "**/*.blg": true,
+            "**/*.run.xml": true,
+        },
+        "[latex]": {
+            "editor.wordWrap": "wordWrapColumn"
+        },
+        "latex-workshop.latex.autoBuild.run": "onSave"
+    }
 }

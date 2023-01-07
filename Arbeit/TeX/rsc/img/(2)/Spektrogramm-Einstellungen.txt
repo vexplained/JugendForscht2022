@@ -1,0 +1,2 @@
+Fenstertyp: Hamming
+Fenstergröße: 4096

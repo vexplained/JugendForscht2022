@@ -1,0 +1,68 @@
+% if tikzpicture not working: https://tex.stackexchange.com/a/541385
+
+\begin{tikzpicture}
+    [
+        % CAUTION: in function={...} are no blank lines allowed
+        declare function=
+            {
+                hoch(\x) = 1;
+                inter(\x) = sin(deg(pi/2 * (\x / \d)));
+                tief(\x) = -1;
+                func_0(\x) = (\x < 0) * (-hoch(\x)) +
+                (\x > 0) * (-tief(\x));
+                func_1(\x) = (\x < -\d) * (-hoch(\x))   +
+                and(\x >= -\d, \x <= \d) * (inter(\x))     +
+                (\x > \d) * (-tief(\x))
+                ;
+            },
+    ]
+
+    \def\d{5}
+    \def\fnord{15}
+
+    \def\xydomain{10}
+
+    \begin{axis}
+        [
+            xlabel={Zeit $t$ [s]},
+            ylabel={Frequenz $f$ [Hz]},
+            xmin=0,
+            xmax=2*\xydomain,
+        ]
+        \addplot
+        [
+            color=red,
+            thick,
+            smooth,
+            domain=0:2*\xydomain,
+        ]
+        {
+            \fnord - func_1(x-\xydomain)
+        }
+        node [pos=0.85, above] (a) {$y=f_{fern}(t)$}
+        ;
+        \addplot
+        [
+        color=blue,
+        thick,
+        domain=0:2*\xydomain,
+        samples=120,
+        ]
+        {
+        \fnord - func_0(x-\xydomain)
+        }
+        node [above = 0.1cm of a] {$y=f_{nah}(t)$}
+        ;
+        \addplot
+        [
+            color=black,
+            thick,
+            domain=0:2*\xydomain,
+        ]
+        {
+            \fnord
+        }
+        node [pos=0.15, below] {$f_0=\fnord Hz$}
+        ;
+    \end{axis}
+\end{tikzpicture}

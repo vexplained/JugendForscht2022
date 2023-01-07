@@ -1,0 +1,163 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[german]{babel}
+\usepackage{import}
+\usepackage{blindtext}
+\usepackage{titling}
+\usepackage{datetime}
+\usepackage{amsmath, pgfplots}
+\usepackage[hidelinks, breaklinks]{hyperref}
+% Links auf Gleitumgebungen springen nicht zur Beschriftung,
+% sondern zum Anfang der Gleitumgebung
+\usepackage[figure]{hypcap}
+\usepackage{fancyhdr}
+\usepackage{float}
+% limit floats to stay in their section
+\usepackage[section]{placeins}
+\usepackage[top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm]{geometry}
+% \usepackage{showframe}
+\usepackage{xcolor}
+
+\usepackage{subcaption}
+\usepackage{graphicx}
+\graphicspath{{./rsc/img/(1)}{./rsc/img/(2)}}
+
+\usepackage[style=verbose-ibid,backend=bibtex]{biblatex}
+\addbibresource{\jobname.bib}
+
+% Umlaut-Unterstützung
+% siehe auch https://www.namsu.de/Extra/befehle/Umlaute.html
+\usepackage[utf8]{inputenc} % Umlaut-Unterstützung
+\usepackage[T1]{fontenc} % Umlaut-Unterstützung für Silbentrennung
+
+\pgfplotsset{compat=1.18}
+% optimize pgfplots compilation: export plot, then import into document to
+% prevent unnecessary recompilation
+\usepgfplotslibrary{groupplots, external}
+\tikzexternalize[prefix=cache/]
+% import additional pgfplots/tikz libraries (for plotting)
+\usepgfplotslibrary{polar, patchplots, colorbrewer}
+\usetikzlibrary{calc, positioning}
+
+% import after tikz configuration
+\usepackage[textwidth=3.7cm,german]{todonotes}
+\setlength{\marginparwidth}{3.7cm}
+% prevent tikz externalization of todo notes since this does not work together
+\makeatletter
+\renewcommand{\todo}[2][]{\tikzexternaldisable\@todo[#1]{#2}\tikzexternalenable}
+\makeatother
+\newcommand\draftred[1]{\textcolor{red}{#1}}
+
+
+% Debug-Anzeige von übervollen Boxen:
+%! FIXME: remove for shipping
+% \overfullrule=1 mm
+% \tikzifexternalizing{\setkeys{Gm}{showframe=false}}{}
+
+\setlength{\headheight}{15pt}
+\addtolength{\topmargin}{-10pt}
+
+\title{\textbf{Geschwindigkeitsmessung von Fahrzeugen durch Audio-Analyse}}
+\author{Levin Fober}
+\date{\today}
+
+\pagestyle{fancy}
+
+\renewcommand{\sectionmark}[1]{\markright{\thesection~- ~#1}}
+
+\fancyhf{} % reset everything
+\fancyhead[L]{\rightmark} % rightmark = current section; leftmark = current chapter
+\fancyfoot[C]{\thepage}
+% \fancyfoot[C]{\theauthor}
+\fancyfoot[L]{}
+
+\AtEndDocument{
+    \FloatBarrier
+    \newpage
+
+    \thispagestyle{plain}
+
+    \hfill
+    \vfill
+
+    \noindent
+    \rule{\textwidth}{0.4pt}
+
+    \noindent
+    Ich versichere, dass ich in dieser Arbeit keine Quellen verwendet habe, die
+    nicht genannt wurden.
+
+    \vspace{5mm}
+
+    \noindent
+    \textbf{Heuchlingen, \thedate}
+
+    \noindent
+    Levin Fober
+
+    \noindent
+    \rule{\textwidth}{0.4pt}
+}
+
+
+\begin{document}
+
+\pagenumbering{Roman}
+
+\maketitle
+
+\begin{center}
+    Jugend forscht
+
+    Ort: Heuchlingen (Ostalbkreis), Baden-Württemberg
+
+    Betreuer: Timo Lachenmaier, Ellen Blaha
+
+    Fachgebiet: Mathematik / Informatik
+\end{center}
+
+\newpage
+
+\thispagestyle{plain}
+
+\section*{Kurzfassung}
+\addcontentsline{toc}{section}{Kurzfassung}
+
+\newpage
+
+\thispagestyle{plain}
+
+\tableofcontents
+
+\newpage
+
+\listoftodos
+
+\thispagestyle{plain}
+
+\cleardoublepage% ensures that the page numbering will change on a recto page
+\pagenumbering{arabic}
+
+\section{Einleitung}
+\input{sections/(1)Ideenfindung.tex}
+
+\section{Vorgehensweise, Materialien und Methode}
+\input{sections/(2)VorgehensweiseMaterialienMethode.tex}
+
+\section{Ergebnisse}
+
+\section{Ergebnisdiskussion}
+
+\section{Zusammenfassung}
+
+\newpage
+
+\section{Abbildungsverzeichnis}
+\listoffigures
+
+\section{Quellen- und Literaturverzeichnis}
+
+\printbibliography
+
+\section{Unterstützungsleistungen}
+
+\end{document}

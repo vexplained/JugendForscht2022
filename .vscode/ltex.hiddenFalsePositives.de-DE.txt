@@ -8,3 +8,5 @@
 {"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qexpandafter .\\E$"}
 {"rule":"COMMA_PARENTHESIS_WHITESPACE","sentence":"^\\Qexpandafter .\\E$"}
 {"rule":"GERMAN_SPELLER_RULE","sentence":"^\\Q=1 mm Gm.showframe=false.\\E$"}
+{"rule":"F_ANSTATT_PH","sentence":"^\\QDie pinke Linie zeigt den Verlauf der Tonhöhe über Zeit und kann als Frequenzgraph interpretiert werden.\\E$"}
+{"rule":"GERMAN_SPELLER_RULE","sentence":"^\\QFür einen ersten Überblick wurden die Audio-Abschnitte in einen Spektrumanalysator geladen.\\E$"}
