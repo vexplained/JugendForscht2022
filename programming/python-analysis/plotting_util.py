@@ -64,7 +64,7 @@ def plot_graph(plot_title: str, axis_name: str, points_x, points_val, graph_x, g
     ax.plot(points_x, points_val, ".", color="#55AAFF", label="points")
     ax.plot(graph_x, graph_y, "-r", label="function")
     ax.set_ylim(ymax=y_axis_limit)
-    ax.set_xlabel("Time passed [s]")
+    ax.set_xlabel("Points [1]")
     ax.set_ylabel(axis_name, color="blue")
     plt.title(plot_title)
 
