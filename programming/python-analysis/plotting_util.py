@@ -16,7 +16,7 @@ from reportlab.lib import pagesizes
 export_counter = 1
 
 
-def plot_amplitude_data(plot_title: str, axis1_name: str, resolution, data1, data1dots: list = [None], axis2_name: str = "", data2: list = [None], data2dots: list = [None], export: bool = True, custom_prefix: str = ""):
+def plot_amplitude_data(plot_title: str, axis1_name: str, resolution, data1, data1dots: list = [None], axis2_name: str = "", data2: list = [None], data2dots: list = [None], graph_on_same_axis: bool = False, export: bool = True, custom_prefix: str = ""):
     global export_counter
 
     x = np.linspace(0, len(data1) / resolution, len(data1))
@@ -29,8 +29,23 @@ def plot_amplitude_data(plot_title: str, axis1_name: str, resolution, data1, dat
     ax.set_xlabel("Time passed [s]")
     ax.set_ylabel(axis1_name, color="blue")
 
+    # set the x-spine
+    ax.spines['left'].set_position('zero')  # type: ignore
+    # turn off the right spine/ticks
+    ax.spines['right'].set_color('none')
+    ax.yaxis.tick_left()
+
+    # set the y-spine
+    ax.spines['bottom'].set_position('zero')  # type: ignore
+
+    # turn off the top spine/ticks
+    ax.spines['top'].set_color('none')
+    ax.xaxis.tick_bottom()
+
     if len(data2) > 1 and data2[0] != None:
-        ax2 = ax.twinx()
+        ax2 = ax
+        if not graph_on_same_axis:
+            ax2 = ax.twinx()
         ax2.plot(x, data2, "-r", label="data2")
         if len(data2dots) > 1 and data2dots[0] != None:
             ax2.plot(x, data2dots, ".", color='#FFA500', label="data2 dots")
