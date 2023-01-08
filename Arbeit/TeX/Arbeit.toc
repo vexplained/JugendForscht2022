@@ -6,7 +6,7 @@
 \contentsline {section}{\numberline {2}Vorgehensweise, Materialien und Methode}{2}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Erste Datensammlung und manuelle Aufbereitung}{2}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Analyse der Audiodaten via Dopplereffekt}{2}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Analyse der Audiodaten via Lautstärkeänderung}{4}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.3}Analyse der Audiodaten via Lautstärkeänderung}{3}{subsection.2.3}%
 \contentsline {section}{\numberline {3}Ergebnisse}{4}{section.3}%
 \contentsline {section}{\numberline {4}Ergebnisdiskussion}{4}{section.4}%
 \contentsline {section}{\numberline {5}Zusammenfassung}{4}{section.5}%

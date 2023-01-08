@@ -1,5 +1,5 @@
-input_path: str = "sampledata/singles/"
-input_filename: str = "1"
+input_path: str = "sampledata/singles/multiple-occurrences/"
+input_filename: str = "3+4"
 
 averaging_resolution: int = 12
 
