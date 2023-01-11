@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.30)  8 JAN 2023 20:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.30)  11 JAN 2023 20:46
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -595,20 +595,31 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layouthoffset=\dimen283
 \Gm@layoutvoffset=\dimen284
 \Gm@dimlist=\toks43
+) (c:/texlive/2022/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2021/07/05 v2.14 Sectioning titles
+\ttl@box=\box67
+\beforetitleunit=\skip65
+\aftertitleunit=\skip66
+\ttl@plus=\dimen285
+\ttl@minus=\dimen286
+\ttl@toksa=\toks44
+\titlewidth=\dimen287
+\titlewidthlast=\dimen288
+\titlewidthfirst=\dimen289
 ) (c:/texlive/2022/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2022/01/07 v1.5 Sub-captions (AR)
  (c:/texlive/2022/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2022/03/01 v3.6b Customizing captions (AR)
  (c:/texlive/2022/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2022/03/17 v2.3b caption3 kernel (AR)
-\caption@tempdima=\dimen285
-\captionmargin=\dimen286
-\caption@leftmargin=\dimen287
-\caption@rightmargin=\dimen288
-\caption@width=\dimen289
-\caption@indent=\dimen290
-\caption@parindent=\dimen291
-\caption@hangindent=\dimen292
+\caption@tempdima=\dimen290
+\captionmargin=\dimen291
+\caption@leftmargin=\dimen292
+\caption@rightmargin=\dimen293
+\caption@width=\dimen294
+\caption@indent=\dimen295
+\caption@parindent=\dimen296
+\caption@hangindent=\dimen297
 Package caption Info: Standard document class detected.
 )
 \c@caption@flags=\count361
@@ -670,14 +681,14 @@ File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 \blx@sectionciteorderinternal@0=\count406
 \blx@entrysetcounter=\count407
 \blx@biblioinstance=\count408
-\labelnumberwidth=\skip65
-\labelalphawidth=\skip66
-\biblabelsep=\skip67
-\bibitemsep=\skip68
-\bibnamesep=\skip69
-\bibinitsep=\skip70
-\bibparsep=\skip71
-\bibhang=\skip72
+\labelnumberwidth=\skip67
+\labelalphawidth=\skip68
+\biblabelsep=\skip69
+\bibitemsep=\skip70
+\bibnamesep=\skip71
+\bibinitsep=\skip72
+\bibparsep=\skip73
+\bibhang=\skip74
 \blx@bcfin=\read4
 \blx@bcfout=\write4
 \blx@langwohyphens=\language88
@@ -761,20 +772,20 @@ Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
 \c@savedoriglanguage=\count477
 \c@pageref=\count478
 \c@savedpageref=\count479
-\shorthandwidth=\skip73
-\shortjournalwidth=\skip74
-\shortserieswidth=\skip75
-\shorttitlewidth=\skip76
-\shortauthorwidth=\skip77
-\shorteditorwidth=\skip78
-\locallabelnumberwidth=\skip79
-\locallabelalphawidth=\skip80
-\localshorthandwidth=\skip81
-\localshortjournalwidth=\skip82
-\localshortserieswidth=\skip83
-\localshorttitlewidth=\skip84
-\localshortauthorwidth=\skip85
-\localshorteditorwidth=\skip86
+\shorthandwidth=\skip75
+\shortjournalwidth=\skip76
+\shortserieswidth=\skip77
+\shorttitlewidth=\skip78
+\shortauthorwidth=\skip79
+\shorteditorwidth=\skip80
+\locallabelnumberwidth=\skip81
+\locallabelalphawidth=\skip82
+\localshorthandwidth=\skip83
+\localshortjournalwidth=\skip84
+\localshortserieswidth=\skip85
+\localshorttitlewidth=\skip86
+\localshortauthorwidth=\skip87
+\localshorteditorwidth=\skip88
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
  (c:/texlive/2022/texmf-dist/tex/latex/biblatex/blx-compat.def
@@ -847,7 +858,7 @@ Package: expl3 2022-10-26 L3 programming layer (loader)
  (c:/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-10-26 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count491
-\l__pdf_internal_box=\box67
+\l__pdf_internal_box=\box68
 ))
 Package biblatex Info: ... and expl3
 (biblatex)             2022-10-26 L3 programming layer (loader) 
@@ -859,8 +870,8 @@ Package: xparse 2022-06-22 L3 Experimental document command parser
 Package: blx-case-expl3 2022/07/12 v3.18b expl3 case changing code for biblatex
 )) (c:/texlive/2022/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
-\inpenc@prehook=\toks44
-\inpenc@posthook=\toks45
+\inpenc@prehook=\toks45
+\inpenc@posthook=\toks46
 ) (c:/texlive/2022/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 ) (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.groupplots.code.tex
@@ -881,14 +892,14 @@ Package: todonotes 2021/06/04
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count495
 \calc@Bcount=\count496
-\calc@Adimen=\dimen293
-\calc@Bdimen=\dimen294
-\calc@Askip=\skip87
-\calc@Bskip=\skip88
+\calc@Adimen=\dimen298
+\calc@Bdimen=\dimen299
+\calc@Askip=\skip89
+\calc@Bskip=\skip90
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count497
-\calc@Cskip=\skip89
+\calc@Cskip=\skip91
 )
 \c@@todonotes@numberoftodonotes=\count498
 )
@@ -904,37 +915,37 @@ Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (./Arbeit.aux)
 \openout1 = `Arbeit.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
  (c:/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count501
-\scratchdimen=\dimen295
-\scratchbox=\box68
+\scratchdimen=\dimen300
+\scratchbox=\box69
 \nofMPsegments=\count502
 \nofMParguments=\count503
-\everyMPshowfont=\toks46
+\everyMPshowfont=\toks47
 \MPscratchCnt=\count504
-\MPscratchDim=\dimen296
+\MPscratchDim=\dimen301
 \MPnumerator=\count505
 \makeMPintoPDFobject=\count506
-\everyMPtoPDFconversion=\toks47
+\everyMPtoPDFconversion=\toks48
 ) (c:/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -943,7 +954,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 Package pgfplots notification 'compat/show suggested version=true': document has been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
-Package hyperref Info: Link coloring OFF on input line 102.
+Package hyperref Info: Link coloring OFF on input line 106.
 (./Arbeit.out) (./Arbeit.out)
 \@outlinefile=\write5
 \openout5 = `Arbeit.out'.
@@ -1001,8 +1012,8 @@ Package biblatex Info: Data encoding 'utf8' specified.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'Arbeit.bbl' found.
  (./Arbeit.bbl)
-Package biblatex Info: Reference section=0 on input line 102.
-Package biblatex Info: Reference segment=0 on input line 102.
+Package biblatex Info: Reference section=0 on input line 106.
+Package biblatex Info: Reference segment=0 on input line 106.
  [1
 
 {c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] (./Arbeit.toc)
@@ -1032,55 +1043,62 @@ Overfull \hbox (1.49149pt too wide) in paragraph at lines 5--6
 \T1/cmr/m/n/12 Da im Phy-sik-Unter-richt ei-ne Ab-itur-auf-ga-be zur Ge-schwin-dig-keits-be-stim-mung ei-nes Renn-
  []
 
-<./rsc/img/(2)/Frequenzen.png, id=131, 1227.58624pt x 1095.09125pt>
-File: ./rsc/img/(2)/Frequenzen.png Graphic file (type png)
-<use ./rsc/img/(2)/Frequenzen.png>
-Package pdftex.def Info: ./rsc/img/(2)/Frequenzen.png  used on input line 31.
-(pdftex.def)             Requested size: 182.09833pt x 162.43524pt.
-<./rsc/img/(2)/Tonhöhe(EAC).png, id=133, 1249.66875pt x 1094.0875pt>
-File: ./rsc/img/(2)/Tonhöhe(EAC).png Graphic file (type png)
-<use ./rsc/img/(2)/Tonhöhe(EAC).png>
-Package pdftex.def Info: ./rsc/img/(2)/Tonhöhe(EAC).png  used on input line 36.
-(pdftex.def)             Requested size: 182.09833pt x 159.4149pt.
-
-Overfull \hbox (2.61049pt too wide) in paragraph at lines 29--40
-[][] [] 
- []
-
+(./rsc/plots/f-t-plot/frequenz-zeit-plot.tex
+===== Image 'cache/Arbeit-figure1' is up-to-date. ======
+)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-(./rsc/plots/f-t-plot/frequenz-zeit-plot.tex
-===== Image 'cache/Arbeit-figure1' is up-to-date. ======
-) [2]) [3 <./rsc/img/(2)/Frequenzen.png> <./rsc/img/(2)/Tonhöhe(EAC).png> <./cache/Arbeit-figure1.pdf>] [4] (./Arbeit.lof)
+<./rsc/img/(2)/Frequenzen.png, id=140, 1227.58624pt x 1095.09125pt>
+File: ./rsc/img/(2)/Frequenzen.png Graphic file (type png)
+<use ./rsc/img/(2)/Frequenzen.png>
+Package pdftex.def Info: ./rsc/img/(2)/Frequenzen.png  used on input line 42.
+(pdftex.def)             Requested size: 182.09833pt x 162.43524pt.
+<./rsc/img/(2)/Tonhöhe(EAC).png, id=142, 1249.66875pt x 1094.0875pt>
+File: ./rsc/img/(2)/Tonhöhe(EAC).png Graphic file (type png)
+<use ./rsc/img/(2)/Tonhöhe(EAC).png>
+Package pdftex.def Info: ./rsc/img/(2)/Tonhöhe(EAC).png  used on input line 47.
+(pdftex.def)             Requested size: 182.09833pt x 159.4149pt.
+
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 40--51
+[][] [] 
+ []
+
+[2]
+<./rsc/img/(2)/SpektrogrammMotor.png, id=157, 724.7075pt x 330.23375pt>
+File: ./rsc/img/(2)/SpektrogrammMotor.png Graphic file (type png)
+<use ./rsc/img/(2)/SpektrogrammMotor.png>
+Package pdftex.def Info: ./rsc/img/(2)/SpektrogrammMotor.png  used on input line 63.
+(pdftex.def)             Requested size: 273.14923pt x 124.46721pt.
+ [3 <./cache/Arbeit-figure1.pdf> <./rsc/img/(2)/Frequenzen.png> <./rsc/img/(2)/Tonhöhe(EAC).png>]) [4 <./rsc/img/(2)/SpektrogrammMotor.png>] (./Arbeit.lof)
 \tf@lof=\write8
 \openout8 = `Arbeit.lof'.
 
 
-Overfull \hbox (61.09573pt too wide) in paragraph at lines 165--165
+Overfull \hbox (61.09573pt too wide) in paragraph at lines 169--169
 \T1/cmr/m/it/12 stel-len, Ein-spruch\T1/cmr/m/n/12 . 2022. \T1/cmr/m/sc/12 url\T1/cmr/m/n/12 : []$\T1/cmtt/m/n/12 https : / / www . bussgeldkatalog . org / geschwindigkeitsmessung /
  []
 
 [5] [6] (./Arbeit.aux)
 Package rerunfilecheck Info: File `Arbeit.out' has not changed.
-(rerunfilecheck)             Checksum: 81DCC2A3EC41B968FB920B14601B763F;2916.
+(rerunfilecheck)             Checksum: CC3A8783CEFA27C173220251B2F4863F;3364.
 Package logreq Info: Writing requests to 'Arbeit.run.xml'.
 \openout1 = `Arbeit.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 44999 strings out of 475066
- 1040428 string characters out of 5782772
- 1991656 words of memory out of 5000000
- 65659 multiletter control sequences out of 15000+600000
+ 45305 strings out of 475066
+ 1044917 string characters out of 5782772
+ 1999732 words of memory out of 5000000
+ 65961 multiletter control sequences out of 15000+600000
  487612 words of font info for 65 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 99i,16n,131p,1922b,1916s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,16n,131p,1922b,1920s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfcc1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on Arbeit.pdf (10 pages, 3024848 bytes).
+Output written on Arbeit.pdf (10 pages, 3258987 bytes).
 PDF statistics:
- 311 PDF objects out of 1000 (max. 8388607)
- 238 compressed objects within 3 object streams
- 36 named destinations out of 1000 (max. 500000)
- 145 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 323 PDF objects out of 1000 (max. 8388607)
+ 248 compressed objects within 3 object streams
+ 34 named destinations out of 1000 (max. 500000)
+ 166 words of extra memory for PDF output out of 10000 (max. 10000000)
 

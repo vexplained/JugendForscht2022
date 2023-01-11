@@ -2,3 +2,4 @@ Fober
 Levin
 Erregerfrequenz
 Dopplerprinzip
+Spektrumanalysator
