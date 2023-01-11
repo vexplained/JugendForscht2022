@@ -37,5 +37,33 @@
     \endverb
     \field{year}{2022}
   \endentry
+
+  \entry{Audacity}{software}{}
+    \name{author}{2}{}{%
+      {{hash=TTA}{%
+         family={Team},
+         familyi={T\bibinitperiod},
+         given={The\bibnamedelima Audacity},
+         giveni={T\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=CC}{%
+         family={Contributors},
+         familyi={C\bibinitperiod},
+         given={Community},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{TTACC1}
+    \strng{fullhash}{TTACC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \field{title}{Audacity ®}
+    \verb{url}
+    \verb https://www.audacityteam.org/
+    \endverb
+    \field{version}{3.2.1}
+  \endentry
 \enddatalist
 \endinput

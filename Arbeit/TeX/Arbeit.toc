@@ -9,9 +9,10 @@
 \contentsline {subsubsection}{\numberline {2.2.1}Verwendung der Reifengeräusche}{3}{subsubsection.2.2.1}%
 \contentsline {subsubsection}{\numberline {2.2.2}Verwendung der Motorgeräusche}{4}{subsubsection.2.2.2}%
 \contentsline {subsection}{\numberline {2.3}Analyse der Audiodaten via Lautstärkeänderung}{4}{subsection.2.3}%
-\contentsline {section}{\numberline {3}Ergebnisse}{4}{section.3}%
-\contentsline {section}{\numberline {4}Ergebnisdiskussion}{4}{section.4}%
-\contentsline {section}{\numberline {5}Zusammenfassung}{4}{section.5}%
-\contentsline {section}{\numberline {6}Abbildungsverzeichnis}{5}{section.6}%
-\contentsline {section}{\numberline {7}Quellen- und Literaturverzeichnis}{5}{section.7}%
-\contentsline {section}{\numberline {8}Unterstützungsleistungen}{5}{section.8}%
+\contentsline {subsubsection}{\numberline {2.3.1}Versuch zur Bestimmung der Beziehung zwischen Lautstärke und Abstand}{4}{subsubsection.2.3.1}%
+\contentsline {section}{\numberline {3}Ergebnisse}{5}{section.3}%
+\contentsline {section}{\numberline {4}Ergebnisdiskussion}{5}{section.4}%
+\contentsline {section}{\numberline {5}Zusammenfassung}{5}{section.5}%
+\contentsline {section}{\numberline {6}Abbildungsverzeichnis}{6}{section.6}%
+\contentsline {section}{\numberline {7}Quellen- und Literaturverzeichnis}{6}{section.7}%
+\contentsline {section}{\numberline {8}Unterstützungsleistungen}{6}{section.8}%

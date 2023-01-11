@@ -65,11 +65,29 @@ Beim Vergleich mit einem theoretisch berechneten Frequenzgraph (\autoref{fig:fre
     \label{fig:spectrum_motor}
 \end{figure}
 
-Nachdem sich die Reifengeräusche als unbrauchbar erwiesen haben, ist nun der nächste Ansatz, die Motorgeräusche aufgrund der eindeutigeren Tonhöhe -- anstatt eines Rauschens -- zu analysieren. Hierfür wird ein Tiefpass mit einer Grenze von \(150 Hz\) auf die Audiospur gelegt, um jegliche Reifengeräusche herauszufiltern. Bei der manuellen Analyse stellt sich jedoch heraus, dass selbst die besten Aufnahmen unbrauchbar sind: Der in \autoref{fig:spectrum_motor} grün umrandete Frequenzverlauf stellt die aufgenommenen Motorgeräusche dar, bei denen die Dopplerverschiebung sichtbar ist. Zwar beinhaltet die Aufnahme vor dem Vorbeifahren des Kfz eindeutige Motorgeräusche, allerdings gibt es keine Messpunkte bei Entfernung des Fahrzeugs (hinter dem „Knick“ im Spektrogramm verschwindet die helle, gelbe Linie). Die Motorgeräusche, die direkt mit der Motordrehzahl zusammenhängen, konnten vom verwendeten Handymikrofon gar nicht aufgezeichnet werden, vermutlich unterläge es jedoch den gleichen Einschränkungen wie die aufgezeichneten Oberwellen. Somit kann auch diese Variante der Geschwindigkeitsbestimmung nicht verwendet werden.
+Nachdem sich die Reifengeräusche als unbrauchbar erwiesen haben, ist nun der nächste Ansatz, die Motorgeräusche aufgrund der eindeutigeren Tonhöhe -- anstatt eines Rauschens -- zu analysieren. Hierfür wird ein Tiefpass mit einer Grenze von \(150 Hz\) auf die Audiospur gelegt, um Reifengeräusche möglichst gut herauszufiltern. Bei der manuellen Analyse stellt sich jedoch heraus, dass selbst die besten Aufnahmen unbrauchbar sind: Der in \autoref{fig:spectrum_motor} grün umrandete Frequenzverlauf stellt die aufgenommenen Motorgeräusche dar, bei denen die Dopplerverschiebung sichtbar ist. Zwar beinhaltet die Aufnahme vor dem Vorbeifahren des Kfz eindeutige Motorgeräusche, allerdings gibt es keine Messpunkte bei Entfernung des Fahrzeugs (hinter dem „Knick“ im Spektrogramm verschwindet die helle, gelbe Linie). Die Motorgeräusche, die direkt mit der Motordrehzahl zusammenhängen, konnten vom verwendeten Handymikrofon gar nicht aufgezeichnet werden, vermutlich unterläge es jedoch den gleichen Einschränkungen wie die aufgezeichneten Oberwellen. Somit kann auch diese Variante der Geschwindigkeitsbestimmung nicht verwendet werden.
 
 \subsection{Analyse der Audiodaten via Lautstärkeänderung}
+Für eine Berechnung der Geschwindigkeit von Fahrzeugen anhand ihrer Lautstärke muss das Verhältnis zwischen Lautstärke und Abstand bekannt sein. Dieses wird im folgenden Versuch experimentell erforscht. Die empirischen Ergebnisse werden anschließend mit einer mathematischen Beziehung verglichen.
 
+\subsubsection{Versuch zur Bestimmung der Beziehung zwischen Lautstärke und Abstand}
 
-Das morgen im Freien irgendwie ausprobieren
--> Schallquelle nicht gerichtet (z.B. Lautsprecher zeigt nach oben, also in die Vertikale)
--> Die Abstandsmessung erfolgt in der Horizontalen
+\begin{figure}[h]
+    \begin{subfigure}{.5\textwidth}
+        \centering
+        \includegraphics[width=.8\linewidth]{VersuchsaufbauAbstandInnen}
+        \caption{Innenraum}
+        \label{img:dist_room}
+    \end{subfigure}
+    \begin{subfigure}{.5\textwidth}
+        \centering
+        \includegraphics[width=.95\linewidth]{VersuchsaufbauAbstandsmessung}
+        \caption{Im Freien}
+        \label{img:dist_free_field}
+    \end{subfigure}
+    \caption{Versuchsaufbau zur Lautstärkebestimmung}
+    \label{img:versuche_abstand}
+\end{figure}
+
+Zuerst wurde eine Messreihe zum Verhältnis zwischen Lautstärke und Abstand im Innenraum durchgeführt. Hierfür wurde ein im Eck stehender Lautsprecher und ein Messmikrofon auf einem Stativ gegenübergestellt. Bei verschiedenen Abständen wurde daraufhin ein \(1 kHz\)-Ton über den Lautsprecher abgespielt und vom Mikrofon aufgenommen. Bei der Auswertung der Messergebnisse stellte sich heraus, dass der Innenraum bei bestimmten Abständen die Töne „verschluckt“, da durch Reflexionen der Schallwelle an den Innenwänden des Raumes an diesen Punkten eine destruktive Interferenz entsteht. Da das Interferenzmuster von der Frequenz der Schallwelle abhängt, wurde anschließend der gleiche Versuch mit einem weißen Rauschen als ausgesendetes Geräusch verwendet, da somit durch das breite Frequenzspektrum die Tiefpunkte der Lautstärke vermieden werden konnten. Zur Berechnung des effektiven Schalldruckpegels (umgangssprachlich oft als „Schallpegel“ bezeichnet) wurde das Programm „Audacity“ \footcite{Audacity} und dessen „Measure RMS“-Funktion verwendet.
+Es stellte sich heraus, dass ... die Messmethode schlecht, da keine freie Ausbreitung (Fachbegriff recherchieren) ...

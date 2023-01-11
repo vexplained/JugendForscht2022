@@ -3,3 +3,6 @@ Levin
 Erregerfrequenz
 Dopplerprinzip
 Spektrumanalysator
+Lautstärkebestimmung
+Audacity
+Schalldruckpegels

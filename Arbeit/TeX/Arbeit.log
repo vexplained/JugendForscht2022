@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.30)  11 JAN 2023 20:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.30)  11 JAN 2023 22:30
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1049,12 +1049,12 @@ Overfull \hbox (1.49149pt too wide) in paragraph at lines 5--6
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./rsc/img/(2)/Frequenzen.png, id=140, 1227.58624pt x 1095.09125pt>
+<./rsc/img/(2)/Frequenzen.png, id=147, 1227.58624pt x 1095.09125pt>
 File: ./rsc/img/(2)/Frequenzen.png Graphic file (type png)
 <use ./rsc/img/(2)/Frequenzen.png>
 Package pdftex.def Info: ./rsc/img/(2)/Frequenzen.png  used on input line 42.
 (pdftex.def)             Requested size: 182.09833pt x 162.43524pt.
-<./rsc/img/(2)/Tonhöhe(EAC).png, id=142, 1249.66875pt x 1094.0875pt>
+<./rsc/img/(2)/Tonhöhe(EAC).png, id=149, 1249.66875pt x 1094.0875pt>
 File: ./rsc/img/(2)/Tonhöhe(EAC).png Graphic file (type png)
 <use ./rsc/img/(2)/Tonhöhe(EAC).png>
 Package pdftex.def Info: ./rsc/img/(2)/Tonhöhe(EAC).png  used on input line 47.
@@ -1065,12 +1065,31 @@ Overfull \hbox (2.61049pt too wide) in paragraph at lines 40--51
  []
 
 [2]
-<./rsc/img/(2)/SpektrogrammMotor.png, id=157, 724.7075pt x 330.23375pt>
+<./rsc/img/(2)/SpektrogrammMotor.png, id=164, 724.7075pt x 330.23375pt>
 File: ./rsc/img/(2)/SpektrogrammMotor.png Graphic file (type png)
 <use ./rsc/img/(2)/SpektrogrammMotor.png>
 Package pdftex.def Info: ./rsc/img/(2)/SpektrogrammMotor.png  used on input line 63.
 (pdftex.def)             Requested size: 273.14923pt x 124.46721pt.
- [3 <./cache/Arbeit-figure1.pdf> <./rsc/img/(2)/Frequenzen.png> <./rsc/img/(2)/Tonhöhe(EAC).png>]) [4 <./rsc/img/(2)/SpektrogrammMotor.png>] (./Arbeit.lof)
+ [3 <./cache/Arbeit-figure1.pdf> <./rsc/img/(2)/Frequenzen.png> <./rsc/img/(2)/Tonhöhe(EAC).png>]
+<./rsc/img/(2)/VersuchsaufbauAbstandInnen.jpg, id=205, 2043.88594pt x 1888.05376pt>
+File: ./rsc/img/(2)/VersuchsaufbauAbstandInnen.jpg Graphic file (type jpg)
+<use ./rsc/img/(2)/VersuchsaufbauAbstandInnen.jpg>
+Package pdftex.def Info: ./rsc/img/(2)/VersuchsaufbauAbstandInnen.jpg  used on input line 78.
+(pdftex.def)             Requested size: 182.09833pt x 168.18895pt.
+<./rsc/img/(2)/VersuchsaufbauAbstandsmessung.png, id=206, 2987.16pt x 2240.37pt>
+File: ./rsc/img/(2)/VersuchsaufbauAbstandsmessung.png Graphic file (type png)
+<use ./rsc/img/(2)/VersuchsaufbauAbstandsmessung.png>
+Package pdftex.def Info: ./rsc/img/(2)/VersuchsaufbauAbstandsmessung.png  used on input line 84.
+(pdftex.def)             Requested size: 216.24025pt x 162.17482pt.
+
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 76--88
+[][] [] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) [4 <./rsc/img/(2)/SpektrogrammMotor.png>] [5 <./rsc/img/(2)/VersuchsaufbauAbstandInnen.jpg> <./rsc/img/(2)/VersuchsaufbauAbstandsmessung.png>] (./Arbeit.lof)
 \tf@lof=\write8
 \openout8 = `Arbeit.lof'.
 
@@ -1079,26 +1098,26 @@ Overfull \hbox (61.09573pt too wide) in paragraph at lines 169--169
 \T1/cmr/m/it/12 stel-len, Ein-spruch\T1/cmr/m/n/12 . 2022. \T1/cmr/m/sc/12 url\T1/cmr/m/n/12 : []$\T1/cmtt/m/n/12 https : / / www . bussgeldkatalog . org / geschwindigkeitsmessung /
  []
 
-[5] [6] (./Arbeit.aux)
+[6] [7] (./Arbeit.aux)
 Package rerunfilecheck Info: File `Arbeit.out' has not changed.
-(rerunfilecheck)             Checksum: CC3A8783CEFA27C173220251B2F4863F;3364.
+(rerunfilecheck)             Checksum: F8E8768C62C1536ECD9F197DCD1D108C;3799.
 Package logreq Info: Writing requests to 'Arbeit.run.xml'.
 \openout1 = `Arbeit.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45305 strings out of 475066
- 1044917 string characters out of 5782772
- 1999732 words of memory out of 5000000
- 65961 multiletter control sequences out of 15000+600000
- 487612 words of font info for 65 fonts, out of 8000000 for 9000
+ 45358 strings out of 475066
+ 1046570 string characters out of 5782772
+ 2000023 words of memory out of 5000000
+ 66001 multiletter control sequences out of 15000+600000
+ 488366 words of font info for 67 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  99i,16n,131p,1922b,1920s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfcc1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on Arbeit.pdf (10 pages, 3258987 bytes).
+{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfcc1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
+Output written on Arbeit.pdf (11 pages, 34662744 bytes).
 PDF statistics:
- 323 PDF objects out of 1000 (max. 8388607)
- 248 compressed objects within 3 object streams
- 34 named destinations out of 1000 (max. 500000)
- 166 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 355 PDF objects out of 1000 (max. 8388607)
+ 274 compressed objects within 3 object streams
+ 40 named destinations out of 1000 (max. 500000)
+ 184 words of extra memory for PDF output out of 10000 (max. 10000000)
 
