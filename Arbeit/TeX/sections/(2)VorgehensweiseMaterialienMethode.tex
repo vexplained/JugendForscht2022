@@ -70,6 +70,48 @@ Nachdem sich die Reifengeräusche als unbrauchbar erwiesen haben, ist nun der n�
 \subsection{Analyse der Audiodaten via Lautstärkeänderung}
 Für eine Berechnung der Geschwindigkeit von Fahrzeugen anhand ihrer Lautstärke muss das Verhältnis zwischen Lautstärke und Abstand bekannt sein. Dieses wird im folgenden Versuch experimentell erforscht. Die empirischen Ergebnisse werden anschließend mit einer mathematischen Beziehung verglichen.
 
+Für eine Berechnung der Geschwindigkeit von Fahrzeugen anhand ihrer Lautstärke muss das Verhältnis zwischen Lautstärke und Abstand bekannt sein. Die ausschlaggebende Größe für die „Lautstärke“ ist der Schalldruck \(p\), der umgekehrt proportional zur Entfernung ist:
+\[
+    p \sim \frac{1}{r}
+\]
+
+Da der Schalldruck mit einem herkömmlichen Mikrofon jedoch nicht gemessen werden kann, muss eine Umrechnung der aufgenommenen Amplitude auf den Schalldruckpegel (umgangssprachlich oft als „Schallpegel“ bezeichnet) vorgenommen werden. \footcite{SchalldruckMessen}
+Da ein Pegel immer eine relative Größe ist, wurde als Referenzwert die maximal von einer Audiodatei speicherbare Amplitude gewählt. Die Gesetzmäßigkeit, dass sich der Schallpegel pro Abstandsverdoppelung um \(6 dB\) verkleinert, wird reziprokes Abstandsgesetz genannt \footcite{SengpielSchallpegelEntfernung} und kann in die Formel
+\[
+    L_{2} = L_{1} - \abs{20 * \log{\left(\frac{r_{1}}{r_{2}}\right)}}
+\]
+übertragen werden. \(L\) ist hierbei der Schallpegel in \(dB\), \([r] = 1 m\) ist der Abstand von Schallquelle und Schallempfänger. \footcite{SengpielSchallpegelEntfernung} Mit den Indizes \(1, 2\) sind erster und zweiter Messpunkt gekennzeichnet (siehe auch \autoref{img:SchalldruckpegelSymbolbild}). Durch Umformung nach \(r_{2}\) erhält man
+\begin{equation}
+    \begin{split}
+        r_{2} = r_{1} * 10^{\left(\frac{\abs{L_{1} - L_{2}}}{20}\right)} \\
+        d_{2} = \sqrt{r_{2}^2 - d_{a}^2}
+    \end{split}
+    \label{formula:RadiusAusSchallpegel}
+\end{equation}
+womit sich bei bekannter Zeitspanne zwischen der ersten und der zweiten Messung unter Berücksichtigung von Pythagoras die Geschwindigkeit des vorbeifahrenden Fahrzeugs bestimmen lässt:
+\[
+    v = \frac{d_{2} - d_{1}}{\Delta t_{1,2}}
+\]
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.4\linewidth]{SchalldruckpegelSymbolbild}
+    \caption{Symbolbild Schalldruckpegel und Abstand (\(d_{a}\): Abstand zur Straße)}
+    \label{img:SchalldruckpegelSymbolbild}
+\end{figure}
+
+Wenn \(d_{a}\) jedoch unbekannt ist, kann keine Geschwindigkeitsberechnung vorgenommen werden, selbst bei der Annahme, dass der Abstand des Mikrofons zur Straße vernachlässigbar ist (\(d_{a} \approx 0\)).
+
+Dieses Problem kann an folgendem Gedankenexperiment veranschaulicht werden: Eine Schalldruckpegel-Änderung um \(+6 dB\) kann interpretiert werden als ein Fahrzeug,
+\begin{enumerate}
+    \item welches sich von \(200 m\) zu \(100 m\) Entfernung (\(100 m\) Entfernungsunterschied) innerhalb der Zeit \(\Delta t\) angenähert hat.
+    \item welches sich von \(100 m\) zu \(50 m\) Entfernung (\(50 m\) Entfernungsunterschied) innerhalb der gleichen Zeit \(\Delta t\) angenähert hat.
+\end{enumerate}
+Dies hätte zur Folge, dass für das Fahrzeug aus Beispiel \((1)\) die doppelte Geschwindigkeit \(v\) wie für Fahrzeug \((2)\) berechnet würde, da es keinen Referenzwert gibt.
+
+Bei bekanntem Abstand zur Straße kann die Aufnahme auf Hochpunkte im Schalldruckpegel untersucht werden. Der Hochpunkt stellt dann den Moment der geringsten Distanz zwischen Mikrofon und Fahrzeug dar. Damit wird die Unbekannte \(r_{1}\) in \autoref{formula:RadiusAusSchallpegel} durch \(d_{a}\) ersetzt und die Unbekannte ist eliminiert. Durch eine Normalisierung der Audiorohdaten auf \(-0 dB\) kann dann für \(L_{1}\) selbiger Gleichung \(L_{1} = 0 [dB]\) eingesetzt werden, was eine weitere Unbekannte eliminiert. Nun muss lediglich der Schalldruckpegel \(L_{2}\) aus den Audiodaten berechnet werden, um den Abstand \(r_{2}\) zu ermitteln.
+
+
 \subsubsection{Versuch zur Bestimmung der Beziehung zwischen Lautstärke und Abstand}
 
 \begin{figure}[h]
@@ -89,5 +131,14 @@ Für eine Berechnung der Geschwindigkeit von Fahrzeugen anhand ihrer Lautstärke
     \label{img:versuche_abstand}
 \end{figure}
 
-Zuerst wurde eine Messreihe zum Verhältnis zwischen Lautstärke und Abstand im Innenraum durchgeführt. Hierfür wurde ein im Eck stehender Lautsprecher und ein Messmikrofon auf einem Stativ gegenübergestellt. Bei verschiedenen Abständen wurde daraufhin ein \(1 kHz\)-Ton über den Lautsprecher abgespielt und vom Mikrofon aufgenommen. Bei der Auswertung der Messergebnisse stellte sich heraus, dass der Innenraum bei bestimmten Abständen die Töne „verschluckt“, da durch Reflexionen der Schallwelle an den Innenwänden des Raumes an diesen Punkten eine destruktive Interferenz entsteht. Da das Interferenzmuster von der Frequenz der Schallwelle abhängt, wurde anschließend der gleiche Versuch mit einem weißen Rauschen als ausgesendetes Geräusch verwendet, da somit durch das breite Frequenzspektrum die Tiefpunkte der Lautstärke vermieden werden konnten. Zur Berechnung des effektiven Schalldruckpegels (umgangssprachlich oft als „Schallpegel“ bezeichnet) wurde das Programm „Audacity“ \footcite{Audacity} und dessen „Measure RMS“-Funktion verwendet.
-Es stellte sich heraus, dass ... die Messmethode schlecht, da keine freie Ausbreitung (Fachbegriff recherchieren) ...
+Zuerst wurde eine Messreihe zum Verhältnis zwischen Lautstärke und Abstand im Innenraum durchgeführt. Hierfür wurde ein im Eck stehender Lautsprecher und ein Messmikrofon auf einem Stativ gegenübergestellt. Bei verschiedenen Abständen wurde zunächst ein \(1 kHz\)-Ton über den Lautsprecher abgespielt und vom Mikrofon aufgenommen. Bei der Auswertung der Messergebnisse stellte sich heraus, dass der Innenraum bei bestimmten Abständen die Töne „verschluckt“, da durch Reflexionen der Schallwelle an den Innenwänden des Raumes an diesen Punkten eine destruktive Interferenz entsteht. Da das Interferenzmuster von der Frequenz der Schallwelle abhängt, wurde anschließend der gleiche Versuch mit einem weißen Rauschen als ausgesendetes Geräusch verwendet, um durch das breite Frequenzspektrum die Tiefpunkte der Lautstärke zu vermeiden. Zur Berechnung des effektiven Schalldruckpegels wurde das Programm „Audacity“ \footcite{Audacity} und dessen „Measure RMS“-Funktion verwendet.
+
+Bei der Auswertung der Aufnahmen stellte sich heraus, dass für Abstandsverdoppelung der Schalldruckpegel um etwa \(4 dB\) absank, was nur \(2/3\) der erwarteten Absenkung entsprach. Diese Abweichung lässt sich mit dem Messverfahren erklären: Der Lautsprecher stellt in seiner aktuellen Aufstellung eine gerichtete Schallquelle dar, der verwendete Innenraum ist nicht reflexionsarm. Beides sind Ausschlusskriterien für die Anwendbarkeit des reziproken Abstandsgesetzes.
+
+
+
+Deshalb wurde Versuch ausführlicher wiederholt....
+
+http://www.sengpielaudio.com/Rechner-entfernung.htm
+
+http://www.sengpielaudio.com/Rechner-abstandsgesetz.htm

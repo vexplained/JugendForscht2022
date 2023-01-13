@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.30)  11 JAN 2023 22:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.30)  13 JAN 2023 22:05
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -630,6 +630,12 @@ Package caption Info: hypcap package is loaded.
 )
 \c@subfigure=\count363
 \c@subtable=\count364
+) (c:/texlive/2022/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2021/02/14 v1.3d Input encoding file
+\inpenc@prehook=\toks45
+\inpenc@posthook=\toks46
+) (c:/texlive/2022/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 ) (c:/texlive/2022/texmf-dist/tex/latex/biblatex/biblatex.sty
 Package: biblatex 2022/07/12 v3.18b programmable bibliographies (PK/MW)
  (c:/texlive/2022/texmf-dist/tex/latex/logreq/logreq.sty
@@ -868,16 +874,38 @@ Package biblatex Info: ... and expl3
 Package: xparse 2022-06-22 L3 Experimental document command parser
 )
 Package: blx-case-expl3 2022/07/12 v3.18b expl3 case changing code for biblatex
-)) (c:/texlive/2022/texmf-dist/tex/latex/base/inputenc.sty
-Package: inputenc 2021/02/14 v1.3d Input encoding file
-\inpenc@prehook=\toks45
-\inpenc@posthook=\toks46
-) (c:/texlive/2022/texmf-dist/tex/latex/base/fontenc.sty
-Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+)) (c:/texlive/2022/texmf-dist/tex/latex/mathtools/mathtools.sty
+Package: mathtools 2022/06/29 v1.29 mathematical typesetting tools
+ (c:/texlive/2022/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count492
+\calc@Bcount=\count493
+\calc@Adimen=\dimen298
+\calc@Bdimen=\dimen299
+\calc@Askip=\skip89
+\calc@Bskip=\skip90
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count494
+\calc@Cskip=\skip91
+) (c:/texlive/2022/texmf-dist/tex/latex/mathtools/mhsetup.sty
+Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
+)
+\g_MT_multlinerow_int=\count495
+\l_MT_multwidth_dim=\dimen300
+\origjot=\skip92
+\l_MT_shortvdotswithinadjustabove_dim=\dimen301
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen302
+\l_MT_above_intertext_sep=\dimen303
+\l_MT_below_intertext_sep=\dimen304
+\l_MT_above_shortintertext_sep=\dimen305
+\l_MT_below_shortintertext_sep=\dimen306
+\xmathstrut@box=\box69
+\xmathstrut@dim=\dimen307
 ) (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.groupplots.code.tex
-\pgfplots@group@current@plot=\count492
-\pgfplots@group@current@row=\count493
-\pgfplots@group@current@column=\count494
+\pgfplots@group@current@plot=\count496
+\pgfplots@group@current@row=\count497
+\pgfplots@group@current@column=\count498
  (c:/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
 File: tikzlibrarycalc.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )) (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.external.code.tex (c:/texlive/2022/texmf-dist/tex/latex/pgf/frontendlayer/libraries/tikzlibraryexternal.code.tex (c:/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzexternalshared.code.tex)))
@@ -888,63 +916,47 @@ File: tikzlibrarypositioning.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ) (c:/texlive/2022/texmf-dist/tex/latex/todonotes/todonotes.sty
 Package: todonotes 2021/06/04 v1.1.5 Todonotes source and documentation.
 Package: todonotes 2021/06/04
- (c:/texlive/2022/texmf-dist/tex/latex/tools/calc.sty
-Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count495
-\calc@Bcount=\count496
-\calc@Adimen=\dimen298
-\calc@Bdimen=\dimen299
-\calc@Askip=\skip89
-\calc@Bskip=\skip90
-LaTeX Info: Redefining \setlength on input line 80.
-LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count497
-\calc@Cskip=\skip91
+\c@@todonotes@numberoftodonotes=\count499
 )
-\c@@todonotes@numberoftodonotes=\count498
-)
-
-Package biblatex Warning: Load 'inputenc' before biblatex.
-
 
 Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (biblatex)                Loading 'csquotes' recommended.
 
-\@quotelevel=\count499
-\@quotereset=\count500
+\@quotelevel=\count500
+\@quotereset=\count501
 (./Arbeit.aux)
 \openout1 = `Arbeit.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
  (c:/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count501
-\scratchdimen=\dimen300
-\scratchbox=\box69
-\nofMPsegments=\count502
-\nofMParguments=\count503
+\scratchcounter=\count502
+\scratchdimen=\dimen308
+\scratchbox=\box70
+\nofMPsegments=\count503
+\nofMParguments=\count504
 \everyMPshowfont=\toks47
-\MPscratchCnt=\count504
-\MPscratchDim=\dimen301
-\MPnumerator=\count505
-\makeMPintoPDFobject=\count506
+\MPscratchCnt=\count505
+\MPscratchDim=\dimen309
+\MPnumerator=\count506
+\makeMPintoPDFobject=\count507
 \everyMPtoPDFconversion=\toks48
 ) (c:/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -954,7 +966,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 Package pgfplots notification 'compat/show suggested version=true': document has been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
-Package hyperref Info: Link coloring OFF on input line 106.
+Package hyperref Info: Link coloring OFF on input line 136.
 (./Arbeit.out) (./Arbeit.out)
 \@outlinefile=\write5
 \openout5 = `Arbeit.out'.
@@ -1012,8 +1024,8 @@ Package biblatex Info: Data encoding 'utf8' specified.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'Arbeit.bbl' found.
  (./Arbeit.bbl)
-Package biblatex Info: Reference section=0 on input line 106.
-Package biblatex Info: Reference segment=0 on input line 106.
+Package biblatex Info: Reference section=0 on input line 136.
+Package biblatex Info: Reference segment=0 on input line 136.
  [1
 
 {c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] (./Arbeit.toc)
@@ -1071,34 +1083,42 @@ File: ./rsc/img/(2)/SpektrogrammMotor.png Graphic file (type png)
 Package pdftex.def Info: ./rsc/img/(2)/SpektrogrammMotor.png  used on input line 63.
 (pdftex.def)             Requested size: 273.14923pt x 124.46721pt.
  [3 <./cache/Arbeit-figure1.pdf> <./rsc/img/(2)/Frequenzen.png> <./rsc/img/(2)/TonhÃ¶he(EAC).png>]
-<./rsc/img/(2)/VersuchsaufbauAbstandInnen.jpg, id=205, 2043.88594pt x 1888.05376pt>
+Underfull \hbox (badness 1924) in paragraph at lines 79--79
+[][][][][]\T1/cmr/m/n/10 Eberhard Seng-piel. \T1/cmr/m/it/10 Re-zi-pro-kes Ab-stands-ge-setz 1/r für Schall-druck\T1/cmr/m/n/10 . \T1/cmr/m/sc/10 url\T1/cmr/m/n/10 : []$\T1/cmtt/m/n/10 {http : / / www .
+ []
+
+[4 <./rsc/img/(2)/SpektrogrammMotor.png>]
+<./rsc/img/(2)/SchalldruckpegelSymbolbild.png, id=221, 220.825pt x 145.54375pt>
+File: ./rsc/img/(2)/SchalldruckpegelSymbolbild.png Graphic file (type png)
+<use ./rsc/img/(2)/SchalldruckpegelSymbolbild.png>
+Package pdftex.def Info: ./rsc/img/(2)/SchalldruckpegelSymbolbild.png  used on input line 98.
+(pdftex.def)             Requested size: 182.09486pt x 120.02176pt.
+ [5 <./rsc/img/(2)/SchalldruckpegelSymbolbild.png>]
+<./rsc/img/(2)/VersuchsaufbauAbstandInnen.jpg, id=241, 2043.88594pt x 1888.05376pt>
 File: ./rsc/img/(2)/VersuchsaufbauAbstandInnen.jpg Graphic file (type jpg)
 <use ./rsc/img/(2)/VersuchsaufbauAbstandInnen.jpg>
-Package pdftex.def Info: ./rsc/img/(2)/VersuchsaufbauAbstandInnen.jpg  used on input line 78.
+Package pdftex.def Info: ./rsc/img/(2)/VersuchsaufbauAbstandInnen.jpg  used on input line 120.
 (pdftex.def)             Requested size: 182.09833pt x 168.18895pt.
-<./rsc/img/(2)/VersuchsaufbauAbstandsmessung.png, id=206, 2987.16pt x 2240.37pt>
+<./rsc/img/(2)/VersuchsaufbauAbstandsmessung.png, id=242, 2987.16pt x 2240.37pt>
 File: ./rsc/img/(2)/VersuchsaufbauAbstandsmessung.png Graphic file (type png)
 <use ./rsc/img/(2)/VersuchsaufbauAbstandsmessung.png>
-Package pdftex.def Info: ./rsc/img/(2)/VersuchsaufbauAbstandsmessung.png  used on input line 84.
+Package pdftex.def Info: ./rsc/img/(2)/VersuchsaufbauAbstandsmessung.png  used on input line 126.
 (pdftex.def)             Requested size: 216.24025pt x 162.17482pt.
 
-Overfull \hbox (2.61049pt too wide) in paragraph at lines 76--88
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 118--130
 [][] [] 
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-) [4 <./rsc/img/(2)/SpektrogrammMotor.png>] [5 <./rsc/img/(2)/VersuchsaufbauAbstandInnen.jpg> <./rsc/img/(2)/VersuchsaufbauAbstandsmessung.png>] (./Arbeit.lof)
+) [6 <./rsc/img/(2)/VersuchsaufbauAbstandInnen.jpg> <./rsc/img/(2)/VersuchsaufbauAbstandsmessung.png>] [7] (./Arbeit.lof)
 \tf@lof=\write8
 \openout8 = `Arbeit.lof'.
 
 
-Overfull \hbox (61.09573pt too wide) in paragraph at lines 169--169
+Overfull \hbox (61.09573pt too wide) in paragraph at lines 199--199
 \T1/cmr/m/it/12 stel-len, Ein-spruch\T1/cmr/m/n/12 . 2022. \T1/cmr/m/sc/12 url\T1/cmr/m/n/12 : []$\T1/cmtt/m/n/12 https : / / www . bussgeldkatalog . org / geschwindigkeitsmessung /
  []
 
-[6] [7] (./Arbeit.aux)
+[8] [9] (./Arbeit.aux)
 Package rerunfilecheck Info: File `Arbeit.out' has not changed.
 (rerunfilecheck)             Checksum: F8E8768C62C1536ECD9F197DCD1D108C;3799.
 Package logreq Info: Writing requests to 'Arbeit.run.xml'.
@@ -1106,18 +1126,18 @@ Package logreq Info: Writing requests to 'Arbeit.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45358 strings out of 475066
- 1046570 string characters out of 5782772
- 2000023 words of memory out of 5000000
- 66001 multiletter control sequences out of 15000+600000
+ 45968 strings out of 475066
+ 1058650 string characters out of 5782772
+ 2013925 words of memory out of 5000000
+ 66589 multiletter control sequences out of 15000+600000
  488366 words of font info for 67 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 99i,16n,131p,1922b,1920s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfcc1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on Arbeit.pdf (11 pages, 34662744 bytes).
+ 99i,20n,131p,1922b,1924s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfcc1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
+Output written on Arbeit.pdf (13 pages, 34753299 bytes).
 PDF statistics:
- 355 PDF objects out of 1000 (max. 8388607)
- 274 compressed objects within 3 object streams
- 40 named destinations out of 1000 (max. 500000)
- 184 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 418 PDF objects out of 1000 (max. 8388607)
+ 324 compressed objects within 4 object streams
+ 53 named destinations out of 1000 (max. 500000)
+ 189 words of extra memory for PDF output out of 10000 (max. 10000000)
 

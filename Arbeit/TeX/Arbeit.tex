@@ -25,13 +25,43 @@
 \usepackage{graphicx}
 \graphicspath{{./rsc/img/(1)}{./rsc/img/(2)}}
 
+% Umlaut-Unterstützung
+% siehe auch https://www.namsu.de/Extra/befehle/Umlaute.html
+% !! inputenc VOR biblatex laden
+\usepackage[utf8]{inputenc} % Umlaut-Unterstützung
+\usepackage[T1]{fontenc} % Umlaut-Unterstützung für Silbentrennung
+
 \usepackage[style=verbose-ibid,backend=bibtex]{biblatex}
 \addbibresource{\jobname.bib}
 
-% Umlaut-Unterstützung
-% siehe auch https://www.namsu.de/Extra/befehle/Umlaute.html
-\usepackage[utf8]{inputenc} % Umlaut-Unterstützung
-\usepackage[T1]{fontenc} % Umlaut-Unterstützung für Silbentrennung
+% Enable use of \abs{value} and \norm{value} in formulas
+% See https://tex.stackexchange.com/a/43009
+\usepackage{mathtools}
+
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}
+
+% Swap the definition of \abs* and \norm*, so that \abs
+% and \norm resizes the size of the brackets, and the 
+% starred version does not.
+\makeatletter
+\let\oldabs\abs
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}
+
+\let\oldnorm\norm
+\def\norm{\@ifstar{\oldnorm}{\oldnorm*}}
+\makeatother
+
+% Use \cdot instead of '*' by default
+\usepackage{etoolbox}
+
+\makeatletter
+\patchcmd{\@fnsymbol}{*}{\ast}{}{}
+\patchcmd{\@fnsymbol}{*}{\ast}{}{}
+\patchcmd{\@fnsymbol}{*}{\ast}{}{}
+\makeatother
+
+\mathcode`\*=\cdot
 
 \pgfplotsset{compat=1.18}
 % optimize pgfplots compilation: export plot, then import into document to

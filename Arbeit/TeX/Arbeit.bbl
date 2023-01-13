@@ -38,6 +38,28 @@
     \field{year}{2022}
   \endentry
 
+  \entry{SengpielSchallpegelEntfernung}{online}{}
+    \name{author}{1}{}{%
+      {{hash=SE}{%
+         family={Sengpiel},
+         familyi={S\bibinitperiod},
+         given={Eberhard},
+         giveni={E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SE1}
+    \strng{fullhash}{SE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{title}{Reziprokes Abstandsgesetz 1/r für Schalldruck}
+    \verb{url}
+    \verb {http://www.sengpielaudio.com/Rechner-entfernung.htm}, {http://www.se
+    \verb ngpielaudio.com/Rechner-abstandsgesetz.htm}
+    \endverb
+  \endentry
+
   \entry{Audacity}{software}{}
     \name{author}{2}{}{%
       {{hash=TTA}{%
@@ -64,6 +86,30 @@
     \verb https://www.audacityteam.org/
     \endverb
     \field{version}{3.2.1}
+  \endentry
+
+  \entry{SchalldruckMessen}{online}{}
+    \name{author}{1}{}{%
+      {{hash=fUBL}{%
+         prefix={für},
+         prefixi={f\bibinitperiod},
+         family={Umwelt},
+         familyi={U\bibinitperiod},
+         given={Bayerisches\bibnamedelima Landesamt},
+         giveni={B\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{UBLf1}
+    \strng{fullhash}{UBLf1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{U}
+    \field{sortinithash}{U}
+    \field{title}{Schall messen und beurteilen}
+    \verb{url}
+    \verb https://www.lfu.bayern.de/laerm/laerm_allgemein/schall_messen_beurtei
+    \verb len/index.htm
+    \endverb
   \endentry
 \enddatalist
 \endinput

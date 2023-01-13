@@ -1,0 +1,5 @@
+-dPDFSETTINGS=/screen   (screen-view-only quality, 72 dpi images)
+-dPDFSETTINGS=/ebook    (low quality, 150 dpi images)			<-almost not usable
+-dPDFSETTINGS=/printer  (high quality, 300 dpi images)			<- very good option
+-dPDFSETTINGS=/prepress (high quality, color preserving, 300 dpi imgs)
+-dPDFSETTINGS=/default  (almost identical to /screen)
