@@ -1,0 +1,43 @@
+\begin{tikzpicture}[scale=0.8]
+    \begin{axis}
+        [
+        xlabel = {Abstand Quelle - Empfänger [m]},
+        % ylabel = {Pegel (RMS) [dB]},
+        ylabel near ticks, yticklabel pos=right,
+        every axis plot/.append style={smooth, mark size=1pt}, % smooth style for all graphs
+        legend pos=north east,
+        xmin=0,
+        ymax=0,
+        ]
+        \addplot
+        [
+            color=red,
+            thick,
+            no marks,
+        ]
+        table
+            [
+                x=Abstand,
+                y=AVG,
+                col sep=comma,
+            ]
+            {rsc/plots/d-L-plot/d-RMS-data.csv}
+        node [pos=0.75, above] (a) {$L_{avg}$}
+        ;
+        \addlegendentry{Mittelwert}
+        \addplot
+        [
+            color=black,
+            very thick,
+            domain=0.2:3.5,
+            samples=30
+        ]
+        {
+            -20 * log10(x) - 18.216
+        }
+        node [above=of a] {$f(d) = -20 * \log(d) - c$}
+        % node [pos=0.85, above] {$f(x) = -20 * \log(x) - c$}
+        ;
+        \addlegendentry{Logarithmusfunktion}
+    \end{axis}
+\end{tikzpicture}

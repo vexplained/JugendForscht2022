@@ -1,0 +1,51 @@
+\begin{tikzpicture}[scale=0.8]
+    \begin{axis}
+        [
+        xlabel = {Abstand Quelle - Empfänger [m]},
+        ylabel = {Pegel (RMS) [dB]},
+        every axis plot/.append style={smooth, mark size=1pt}, % smooth style for all graphs
+        legend pos=north east,
+        xmin=0,
+        ymax=0,
+        ]
+        \addplot
+        [
+            color=blue,
+        ]
+        table
+            [
+                x=Abstand,
+                y=RMS1,
+                col sep=comma,
+            ]
+            {rsc/plots/d-L-plot/d-RMS-data.csv}
+        node [pos=0.85, above] (a) {$L_{1}$};
+        \addlegendentry{Reihe 1}
+        \addplot
+        [
+            color=cyan,
+        ]
+        table
+            [
+                x=Abstand,
+                y=RMS2,
+                col sep=comma,
+            ]
+            {rsc/plots/d-L-plot/d-RMS-data.csv}
+        node [pos=0.85, below] {$L_{2}$};
+        \addlegendentry{Reihe 2}
+        \addplot
+        [
+            color=black!50!green,
+        ]
+        table
+            [
+                x=Abstand,
+                y=RMS3,
+                col sep=comma,
+            ]
+            {rsc/plots/d-L-plot/d-RMS-data.csv}
+        node [pos=0.7, below] {$L_{3}$};
+        \addlegendentry{Reihe 3}
+    \end{axis}
+\end{tikzpicture}

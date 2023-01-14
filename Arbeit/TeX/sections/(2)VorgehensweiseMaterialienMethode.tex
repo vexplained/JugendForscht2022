@@ -131,13 +131,30 @@ Bei bekanntem Abstand zur Straße kann die Aufnahme auf Hochpunkte im Schalldruc
     \label{img:versuche_abstand}
 \end{figure}
 
-Zuerst wurde eine Messreihe zum Verhältnis zwischen Lautstärke und Abstand im Innenraum durchgeführt. Hierfür wurde ein im Eck stehender Lautsprecher und ein Messmikrofon auf einem Stativ gegenübergestellt. Bei verschiedenen Abständen wurde zunächst ein \(1 kHz\)-Ton über den Lautsprecher abgespielt und vom Mikrofon aufgenommen. Bei der Auswertung der Messergebnisse stellte sich heraus, dass der Innenraum bei bestimmten Abständen die Töne „verschluckt“, da durch Reflexionen der Schallwelle an den Innenwänden des Raumes an diesen Punkten eine destruktive Interferenz entsteht. Da das Interferenzmuster von der Frequenz der Schallwelle abhängt, wurde anschließend der gleiche Versuch mit einem weißen Rauschen als ausgesendetes Geräusch verwendet, um durch das breite Frequenzspektrum die Tiefpunkte der Lautstärke zu vermeiden. Zur Berechnung des effektiven Schalldruckpegels wurde das Programm „Audacity“ \footcite{Audacity} und dessen „Measure RMS“-Funktion verwendet.
+Zuerst wurde eine Messreihe zum Verhältnis zwischen Lautstärke und Abstand im Innenraum durchgeführt. Hierfür wurde ein im Eck stehender Lautsprecher und ein Messmikrofon auf einem Stativ gegenübergestellt (siehe \autoref{img:dist_room}). Bei verschiedenen Abständen wurde zunächst ein \(1 kHz\)-Ton über den Lautsprecher abgespielt und vom Mikrofon aufgenommen. Bei der Auswertung der Messergebnisse stellte sich heraus, dass der Innenraum bei bestimmten Abständen die Töne „verschluckt“, da durch Reflexionen der Schallwelle an den Innenwänden des Raumes an diesen Punkten eine destruktive Interferenz entsteht. Da das Interferenzmuster von der Frequenz der Schallwelle abhängt, wurde anschließend der gleiche Versuch mit einem weißen Rauschen als ausgesendetes Geräusch verwendet, um durch das breite Frequenzspektrum die Tiefpunkte der Lautstärke zu vermeiden. Zur Berechnung des effektiven Schalldruckpegels wurde das Programm „Audacity“ \footcite{Audacity} und dessen „Measure RMS“-Funktion verwendet.
 
-Bei der Auswertung der Aufnahmen stellte sich heraus, dass für Abstandsverdoppelung der Schalldruckpegel um etwa \(4 dB\) absank, was nur \(2/3\) der erwarteten Absenkung entsprach. Diese Abweichung lässt sich mit dem Messverfahren erklären: Der Lautsprecher stellt in seiner aktuellen Aufstellung eine gerichtete Schallquelle dar, der verwendete Innenraum ist nicht reflexionsarm. Beides sind Ausschlusskriterien für die Anwendbarkeit des reziproken Abstandsgesetzes.
+Bei der Auswertung der Aufnahmen stellte sich heraus, dass für Abstandsverdoppelung der Schalldruckpegel um etwa \(4 dB\) absank, was nur zwei Drittel der erwarteten Absenkung entspricht. Diese Abweichung lässt sich auf den Versuchsaufbau zurückführen: Der Lautsprecher stellt in seiner aktuellen Aufstellung eine gerichtete Schallquelle dar, der verwendete Innenraum ist nicht reflexionsarm. Beides sind Ausschlusskriterien für die Anwendbarkeit des reziproken Abstandsgesetzes, da der Pegelabfall dadurch geringer ausfällt.
 
+Um beide Probleme zu beheben, wurde ein zweiter Versuch durchgeführt. Dieser fand im Freien statt, um Reflexionen an Wänden zu vermeiden. Zudem wurde der verwendete Lautsprecher mit seiner Membran (Chassis) nach oben ausgerichtet, das Mikrofon wurde für die Entfernungsmessung jedoch weiterhin in der Horizontalen bewegt. Somit kann die Schallquelle näherungsweise als Quelle mit kugel- bzw. halbkugelförmiger Charakteristik betrachtet werden, ähnlich wie es ein vorbeifahrendes Fahrzeug darstellt. Es wurden drei Messreihen aufgestellt, die ersten beiden davon mit gleicher Ausgabeamplitude des Lautsprechers, die dritte mit geringerer Amplitude.
 
+\begin{figure}[h]
+    \begin{subfigure}{.5\textwidth}
+        \centering
+        \import{rsc/plots/d-L-plot/}{abstand-pegel-plot.tex}
+        \caption{Rohdaten}
+        \label{fig:pegelplot_roh}
+    \end{subfigure}
+    \hfil
+    \begin{subfigure}{.5\textwidth}
+        \centering
+        \import{rsc/plots/d-L-plot/}{d-L-avg-plot.tex}
+        \caption{Mittelwert und Vergleichsfunktion}
+        \label{fig:pegelplot_avg}
+    \end{subfigure}
+\end{figure}
 
-Deshalb wurde Versuch ausführlicher wiederholt....
+In \autoref{fig:pegelplot_roh} sind die aufgenommenen Rohdaten aller Messreihen. Diese werden in \autoref{fig:pegelplot_avg} mit der Logarithmus-Funktion für den Bezug von Schalldruckpegel und Distanz verglichen. Es fällt auf, dass die gemittelte Pegelfunktion fast identisch mit der Logarithmus-Funktion ist, wodurch der Zusammenhang der Pegelabnahme um sechs Dezibel pro Abstandsverdoppelung bestätigt.
+
 
 http://www.sengpielaudio.com/Rechner-entfernung.htm
 
