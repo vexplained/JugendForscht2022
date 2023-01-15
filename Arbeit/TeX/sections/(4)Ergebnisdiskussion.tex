@@ -1,0 +1,20 @@
+\subsection{Resultate der Doppler-Analyse}
+Aufgrund der Inkonsistenz der Audio-Aufnahmen musste der Ansatz einer Geschwindigkeitsberechnung über die Änderung der Tonhöhe von Reifen- und Motorgeräuschen verworfen werden.
+
+Diese Berechnung wäre möglich, wenn Einsatzfahrzeuge mit eingeschaltetem Martinshorn vorbeifahren, da eine eindeutige und laute Frequenz aufgenommen werden kann.
+
+Vorteil dieses Ansatzes wäre gewesen, dass eine Eingabe des Abstandes vom Mikrofon bzw. Smartphone zur Straße nicht nötig gewesen wäre. Dieser Abstand hätte über die Änderungsgeschwindigkeit der Tonhöhe berechnet werden können, wie in \autoref{fig:frequencyplot} dargestellt.
+
+\subsection{Resultate der Lautstärke-Analyse}
+Im aktuellen Stadium ist die Geschwindigkeitsberechnung sehr unzuverlässig. Zudem müssen Audio-Aufnahmen vorab zugeschnitten werden, um analysiert werden zu können. Dennoch ist die Berechnung bei entsprechender Datengrundlage möglich, wie erste Tests mit einem neuen Algorithmus gezeigt haben.
+
+\subsection{Nachteile einer Geschwindigkeitsmessung über Schall gegenüber optischen Messmethoden}
+Der Vorteil der akustischen Messung, dass die Aufnahmeinstrumente nicht direkt auf ein Fahrzeug gerichtet werden müssen, wie das bei Laserpistolen üblich ist, ist bei großem Verkehrsaufkommen ein Nachteil. Durch die Überlagerung des Schalls der Fahrzeuge gibt es keine eindeutige Amplitudenfunktion mit Hyperbelform mehr.
+Des Weiteren hängt die Anwendbarkeit des reziproken Abstandsgesetzes (\autoref{equation:reciprocal_distance_law}) von der Beschaffenheit des Straßenumfelds ab, da zum Beispiel Mauern oder Wände neben der Straße Reflexionen erzeugen, die den Pegelabfall pro Abstandsverdopplung verkleinern und dadurch das Ergebnis verfälschen. \cite{WikiSchalldruckAbstand}
+
+\subsection{Weiteres Vorgehen}
+Für die Verbesserung der Zuverlässigkeit der Berechnung wird zunächst der Algorithmus zur Geschwindigkeitsberechnung aus den Rohdaten weiterentwickelt und dessen Anwendbarkeit evaluiert.
+
+Eine weitaus universellere Lösung wäre das Trainieren einer Künstlichen Intelligenz. Es bleibt jedoch fraglich, ob diese ohne Angabe des Abstandes von Mikrofon und Straße auskommt. Bei entsprechendem Trainingsset könnte dieses jedoch die Probleme mit Reflexionen an Wänden und eventuell hohes Verkehrsaufkommen beheben. Die Schwierigkeit bei der Erstellung des Trainingssets liegt dabei in der Vollumfänglichkeit, zum Beispiel der Verwendung unterschiedlicher Smartphones als Aufnahmegerät, Berücksichtigung verschiedener Fahrbahnoberflächen sowie Fahrzeugen.
+
+Wenn eine funktionierende Lösung gefunden wurde, soll diese in eine App für Smartphones implementiert werden. Für die „Live“-Auswertung in einer App muss noch ein Algorithmus entwickelt werden, der das Intervall der Audio-Aufnahme bestimmt, die für die Geschwindigkeitsberechnung verwendet wird, da die Audiodaten nicht kontinuierlich analysiert werden können.

@@ -1,5 +1,7 @@
 \subsection{Erste Datensammlung und manuelle Aufbereitung}
-Für eine möglichst gute Datengrundlage wurde an einer geraden Straße Aufnahmen von insgesamt 21 vorbeifahrenden Kfz gemacht, sowohl von dicht aufeinanderfolgenden, als auch einzelnen Fahrzeugen. Als Aufnahmegerät wurde ein Smartphone mit integrierter Rekorder-App verwendet. Die zusammenhängende Aufnahme aller Fahrzeuge wurde anschließend von Hand in einzelne Abschnitte unterteilt und als WAV-Audiodateien gespeichert. \draftred{Dieses unkomprimierte Format wurde gewählt, um die Implementierung der Datenanalyse zu erleichtern.}\todo[inline]{Andere Begründung?} %todo
+Für eine möglichst gute Datengrundlage wurde an der B19 im Ort Abtsgmünd (Ostalbkreis) Aufnahmen von insgesamt 21 vorbeifahrenden Kfz gemacht, sowohl von dicht aufeinanderfolgenden, als auch einzelnen Fahrzeugen. Die Straße wurde gewählt, da im näheren Umfeld kaum Bebauung ist, die Reflexionen der Fahrzeuggeräusche verursachen könnte. Es ist zudem wichtig, dass die Straße keine Kurven aufweist, da sonst die Wegänderung vorbeifahrender Fahrzeuge nicht korrekt berechnet werden kann. Als Aufnahmegerät wurde ein Smartphone mit integrierter Rekorder-App verwendet. Die zusammenhängende Aufnahme aller Fahrzeuge wurde anschließend von Hand in einzelne Abschnitte unterteilt und als WAV-Audiodateien gespeichert.
+
+Die Auswertung der Audiodaten geschieht auf Grundlage dieser Dateien, das heißt, es wird vorerst \emph{keine} Echtzeitauswertung durchgeführt.
 
 \subsection{Analyse der Audiodaten via Dopplereffekt}
 Da im Phy\-sik-Unter\-richt eine Abituraufgabe zur Geschwindigkeitsbestimmung eines Rennwagens mittels Differenz der Frequenz bei Annäherung und Entfernung behandelt wurde, ist das der erste verfolgte Ansatz. Es erscheint zudem einfach, die Geschwindigkeit akkurat zu ermitteln, da selbst ein Mensch eindeutige Frequenzveränderungen hören kann, beispielsweise bei einem vorbeifahrenden Krankenwagen mit Martinshorn. Allerdings muss bei normalen Kfz das Reifengeräusch anstelle des Martinshorns verwendet werden, da dieses mit Abstand die lauteste Geräuschquelle des Straßenverkehrs ist.
@@ -12,7 +14,7 @@ Wenn der Abstand des vorbeifahrenden Fahrzeugs zum Beobachter vernachlässigt un
     f_{2} = f_{0} * \frac{c}{c + v}
 \]
 
-Dabei ist \(f_{1}\) die vom Beobachter registrierte Frequenz bei Annäherung und \(f_{2}\) die Frequenz bei Entfernung des Fahrzeugs. Die Konstante \(c\) wird mit \(c = 343\frac{m}{s}\) als Schallgeschwindigkeit in Luft angenommen. Durch Messung beider Frequenzen kann das Frequenzverhältnis \(k = \frac{f_{1}}{f_{2}}\) berechnet und nach \(v\) umgestellt werden:
+Dabei ist \(f_{1}\) die vom Beobachter registrierte Frequenz bei Annäherung und \(f_{2}\) die Frequenz bei Entfernung des Fahrzeugs. Die Frequenz \(f_{0}\) stellt die tatsächlich vom Motor generierte Frequenz dar. \cite{PhysikAbituraufgabe}  Die Konstante \(c\) wird mit \(c = 343\frac{m}{s}\) als Schallgeschwindigkeit in Luft definiert. Durch Messung beider Frequenzen kann das Frequenzverhältnis \(k = \frac{f_{1}}{f_{2}}\) berechnet und nach \(v\) umgestellt werden:
 
 \begin{equation*}
     \begin{split}
@@ -52,9 +54,11 @@ Für einen ersten Überblick wurden die Audio-Abschnitte in einen Spektrumanalys
     \label{img:spectrumanalyzer}
 \end{figure}
 
-\autoref{img:spectrum_b} wurde nachbearbeitet. Die pinkfarbene Linie zeigt den Verlauf der Tonhöhe über Zeit und kann als Frequenzgraph interpretiert werden. Ab der tiefsten Stelle des Graphen ist das vorbeifahrende Kfz am nächsten zum Mikrofon.
+Zu \autoref{img:spectrum_b} wurde nachträglich die pinkfarbene Linie hinzugefügt, um den Verlauf der Tonhöhe besser kenntlich zu machen. Diese Linie zeigt den Verlauf der Tonhöhe über Zeit und kann als Frequenzgraph interpretiert werden. An der tiefsten Stelle des Graphen hat das Kfz den geringsten Abstand zum Mikrofon.
 
-Beim Vergleich mit einem theoretisch berechneten Frequenzgraph (\autoref{fig:frequencyplot}) fällt auf, dass die aufgenommene Frequenz der Reifengeräusche vor Vorbeifahren (in der Beispielabbildung bei \(t = 10 s\)) nicht höher ist als nach dem Vorbeifahren, sondern bei niedrigerem Abstand geringer ist. Es konnte keine wissenschaftliche Erarbeitung dieses Phänomens gefunden werden, am wahrscheinlichsten ist jedoch eine Reflexion der akustischen Wellen am Boden, die mit den direkt zum Mikrofon laufenden Wellen interferieren und somit hohe Frequenzen auslöschen. Aufgrund dieser unklaren Messergebnisse kann dieser Ansatz jedoch nicht weiterverfolgt werden.
+Beim Vergleich mit einem theoretisch berechneten Frequenzgraph (\autoref{fig:frequencyplot}) fällt auf, dass die Frequenz der Reifengeräusche nach dem Vorbeifahren (in der Beispielabbildung bei \(t > 10 s\)) niedriger als vor dem Vorbeifahren sein sollte, dies in der Messung aber nicht so ist.
+
+Ich vermute, dass Reflexionen der akustischen Wellen am Boden, die mit den direkt zum Mikrofon laufenden Wellen interferieren und somit hohe Frequenzen auslöschen, die Erklärung für dieses Phänomen sind. Ich konnte bei meiner Recherche keine wissenschaftliche Erarbeitung dieses Phänomens finden. Da mein Ziel die Erstellung der Software ist, habe ich auf eine detaillierte Nachforschung zum jetzigen Zeitpunkt verzichtet.
 
 \subsubsection{Verwendung der Motorgeräusche}
 
@@ -65,28 +69,39 @@ Beim Vergleich mit einem theoretisch berechneten Frequenzgraph (\autoref{fig:fre
     \label{fig:spectrum_motor}
 \end{figure}
 
-Nachdem sich die Reifengeräusche als unbrauchbar erwiesen haben, ist nun der nächste Ansatz, die Motorgeräusche aufgrund der eindeutigeren Tonhöhe -- anstatt eines Rauschens -- zu analysieren. Hierfür wird ein Tiefpass mit einer Grenze von \(150 Hz\) auf die Audiospur gelegt, um Reifengeräusche möglichst gut herauszufiltern. Bei der manuellen Analyse stellt sich jedoch heraus, dass selbst die besten Aufnahmen unbrauchbar sind: Der in \autoref{fig:spectrum_motor} grün umrandete Frequenzverlauf stellt die aufgenommenen Motorgeräusche dar, bei denen die Dopplerverschiebung sichtbar ist. Zwar beinhaltet die Aufnahme vor dem Vorbeifahren des Kfz eindeutige Motorgeräusche, allerdings gibt es keine Messpunkte bei Entfernung des Fahrzeugs (hinter dem „Knick“ im Spektrogramm verschwindet die helle, gelbe Linie). Die Motorgeräusche, die direkt mit der Motordrehzahl zusammenhängen, konnten vom verwendeten Handymikrofon gar nicht aufgezeichnet werden, vermutlich unterläge es jedoch den gleichen Einschränkungen wie die aufgezeichneten Oberwellen. Somit kann auch diese Variante der Geschwindigkeitsbestimmung nicht verwendet werden.
+Nachdem sich die Reifengeräusche aufgrund des unerwarteten Tonhöhenverlaufs als unbrauchbar erwiesen haben, ist nun der nächste Ansatz, die Motorgeräusche aufgrund der eindeutigeren Tonhöhe -- anstatt des Rauschens der Reifen -- zu analysieren. Hierfür wird ein Tiefpass mit einer Grenze von \(150 Hz\) auf die Audiospur gelegt, um Reifengeräusche möglichst gut herauszufiltern. Bei der manuellen Analyse stellte sich jedoch heraus, dass selbst die besten Aufnahmen unbrauchbar sind: Der in \autoref{fig:spectrum_motor} grün umrandete Frequenzverlauf stellt die aufgenommenen Motorgeräusche dar, bei denen die Dopplerverschiebung sichtbar ist. Zwar beinhaltet die Aufnahme vor dem Vorbeifahren des Kfz eindeutige Motorgeräusche, allerdings gibt es keine Messpunkte bei Entfernung des Fahrzeugs (hinter dem „Knick“ im Spektrogramm verschwindet die helle, gelbe Linie). Die Motorgeräusche, die direkt mit der Motordrehzahl zusammenhängen, konnten vom verwendeten Handymikrofon gar nicht aufgezeichnet werden, da die Frequenzen unter \(50 Hz\) liegen, das Mikrofon diese Frequenzen jedoch nicht mehr aufnehmen kann. Vermutlich unterläge es jedoch den gleichen Einschränkungen wie die aufgezeichneten Oberwellen. Somit kann auch diese Variante der Geschwindigkeitsbestimmung nicht verwendet werden.
 
 \subsection{Analyse der Audiodaten via Lautstärkeänderung}
-Für eine Berechnung der Geschwindigkeit von Fahrzeugen anhand ihrer Lautstärke muss das Verhältnis zwischen Lautstärke und Abstand bekannt sein. Dieses wird im folgenden Versuch experimentell erforscht. Die empirischen Ergebnisse werden anschließend mit einer mathematischen Beziehung verglichen.
+\label{section:AnalyseAudiodatenPegel}
+Für eine Berechnung der Geschwindigkeit von Fahrzeugen anhand ihrer Lautstärke muss das Verhältnis zwischen Lautstärke und Abstand bekannt sein. Dieses wird im Folgenden mathematisch hergeleitet. Anschließend wird die Anwendbarkeit der Beziehung experimentell erforscht und die Ergebnisse mit der Theorie verglichen.
 
-Für eine Berechnung der Geschwindigkeit von Fahrzeugen anhand ihrer Lautstärke muss das Verhältnis zwischen Lautstärke und Abstand bekannt sein. Die ausschlaggebende Größe für die „Lautstärke“ ist der Schalldruck \(p\), der umgekehrt proportional zur Entfernung ist:
-\[
+Die ausschlaggebende Größe für die „Lautstärke“ ist der Schalldruck \(p\), der umgekehrt proportional zur Entfernung \(r\) ist:
+\begin{equation}
     p \sim \frac{1}{r}
-\]
+    \label{equation:reciprocal_distance_law}
+\end{equation}
 
-Da der Schalldruck mit einem herkömmlichen Mikrofon jedoch nicht gemessen werden kann, muss eine Umrechnung der aufgenommenen Amplitude auf den Schalldruckpegel (umgangssprachlich oft als „Schallpegel“ bezeichnet) vorgenommen werden. \footcite{SchalldruckMessen}
-Da ein Pegel immer eine relative Größe ist, wurde als Referenzwert die maximal von einer Audiodatei speicherbare Amplitude gewählt. Die Gesetzmäßigkeit, dass sich der Schallpegel pro Abstandsverdoppelung um \(6 dB\) verkleinert, wird reziprokes Abstandsgesetz genannt \footcite{SengpielSchallpegelEntfernung} und kann in die Formel
+Diese Beziehung wird als reziprokes Abstandsgesetzes bezeichnet. \cite{SengpielSchallpegelEntfernung}
+Da der Schalldruck mit einem herkömmlichen Mikrofon jedoch nicht gemessen werden kann, muss eine Umrechnung der aufgenommenen Amplitude auf den Schalldruckpegel (umgangssprachlich oft als „Schallpegel“ bezeichnet) vorgenommen werden. \cite{SchalldruckMessen}
+Der Pegel ist immer eine relative Größe, weshalb als Referenzwert die maximal von einer Audiodatei speicherbare Amplitude gewählt wurde.
+
+Aufgrund der logarithmischen Charakteristik eines Pegels \(L_{p}\) kann mittels der Formel für die Pegelberechnung aus der Amplitude \(a mit a \sim p\)
+\[
+    L_{p} = 20 * \log{\left(a\right)}
+\]
+hergeleitet werden.
+
+Dieses Verhältnis von Abstand und Pegel kann in die Gleichung
 \[
     L_{2} = L_{1} - \abs{20 * \log{\left(\frac{r_{1}}{r_{2}}\right)}}
 \]
-übertragen werden. \(L\) ist hierbei der Schallpegel in \(dB\), \([r] = 1 m\) ist der Abstand von Schallquelle und Schallempfänger. \footcite{SengpielSchallpegelEntfernung} Mit den Indizes \(1, 2\) sind erster und zweiter Messpunkt gekennzeichnet (siehe auch \autoref{img:SchalldruckpegelSymbolbild}). Durch Umformung nach \(r_{2}\) erhält man
+übertragen werden. \(L\) ist hierbei wieder der Schallpegel in \(dB\), \([r] = 1 m\) ist der Abstand von Schallquelle und Schallempfänger. Es gilt, dass pro Abstandsverdoppelung der Schalldruckpegel um \(6 dB\) abnimmt. \cite{SengpielSchallpegelEntfernung} Mit den Indizes \(1, 2\) sind erster und zweiter Messpunkt gekennzeichnet (siehe auch \autoref{img:SchalldruckpegelSymbolbild}). Durch Umformung nach \(r_{2}\) erhält man
 \begin{equation}
     \begin{split}
         r_{2} = r_{1} * 10^{\left(\frac{\abs{L_{1} - L_{2}}}{20}\right)} \\
         d_{2} = \sqrt{r_{2}^2 - d_{a}^2}
     \end{split}
-    \label{formula:RadiusAusSchallpegel}
+    \label{equation:RadiusAusSchallpegel}
 \end{equation}
 womit sich bei bekannter Zeitspanne zwischen der ersten und der zweiten Messung unter Berücksichtigung von Pythagoras die Geschwindigkeit des vorbeifahrenden Fahrzeugs bestimmen lässt:
 \[
@@ -100,16 +115,16 @@ womit sich bei bekannter Zeitspanne zwischen der ersten und der zweiten Messung 
     \label{img:SchalldruckpegelSymbolbild}
 \end{figure}
 
-Wenn \(d_{a}\) jedoch unbekannt ist, kann keine Geschwindigkeitsberechnung vorgenommen werden, selbst bei der Annahme, dass der Abstand des Mikrofons zur Straße vernachlässigbar ist (\(d_{a} \approx 0\)).
+\(d_{a}\) ist hierbei der Abstand des Mikrofons zur Straße. Wenn \(d_{a}\) jedoch unbekannt ist, kann keine Geschwindigkeitsberechnung vorgenommen werden, selbst bei der Annahme, dass der Abstand des Mikrofons zur Straße vernachlässigbar ist (\(d_{a} \approx 0\)).
 
-Dieses Problem kann an folgendem Gedankenexperiment veranschaulicht werden: Eine Schalldruckpegel-Änderung um \(+6 dB\) kann interpretiert werden als ein Fahrzeug,
+Dieses Problem kann an folgendem Gedankenexperiment veranschaulicht werden: Eine Schall\-druck\-pegel-Änderung um \(+6 dB\) kann interpretiert werden als ein Fahrzeug,
 \begin{enumerate}
     \item welches sich von \(200 m\) zu \(100 m\) Entfernung (\(100 m\) Entfernungsunterschied) innerhalb der Zeit \(\Delta t\) angenähert hat.
     \item welches sich von \(100 m\) zu \(50 m\) Entfernung (\(50 m\) Entfernungsunterschied) innerhalb der gleichen Zeit \(\Delta t\) angenähert hat.
 \end{enumerate}
 Dies hätte zur Folge, dass für das Fahrzeug aus Beispiel \((1)\) die doppelte Geschwindigkeit \(v\) wie für Fahrzeug \((2)\) berechnet würde, da es keinen Referenzwert gibt.
 
-Bei bekanntem Abstand zur Straße kann die Aufnahme auf Hochpunkte im Schalldruckpegel untersucht werden. Der Hochpunkt stellt dann den Moment der geringsten Distanz zwischen Mikrofon und Fahrzeug dar. Damit wird die Unbekannte \(r_{1}\) in \autoref{formula:RadiusAusSchallpegel} durch \(d_{a}\) ersetzt und die Unbekannte ist eliminiert. Durch eine Normalisierung der Audiorohdaten auf \(-0 dB\) kann dann für \(L_{1}\) selbiger Gleichung \(L_{1} = 0 [dB]\) eingesetzt werden, was eine weitere Unbekannte eliminiert. Nun muss lediglich der Schalldruckpegel \(L_{2}\) aus den Audiodaten berechnet werden, um den Abstand \(r_{2}\) zu ermitteln.
+Bei bekanntem Abstand zur Straße kann die Aufnahme auf Hochpunkte im Schalldruckpegel untersucht werden. Der Hochpunkt stellt dann den Moment der geringsten Distanz zwischen Mikrofon und Fahrzeug dar. Damit wird die Unbekannte \(r_{1}\) in \autoref{equation:RadiusAusSchallpegel} durch \(d_{a}\) ersetzt und die Unbekannte ist eliminiert. Durch eine Normalisierung der Audiorohdaten auf \(-0 dB\) kann dann für \(L_{1}\) selbiger Gleichung \(L_{1} = 0 [dB]\) eingesetzt werden, was eine weitere Unbekannte eliminiert. Nun muss lediglich der Schalldruckpegel \(L_{2}\) aus den Audiodaten berechnet werden, um den Abstand \(r_{2}\) zu ermitteln.
 
 
 \subsubsection{Versuch zur Bestimmung der Beziehung zwischen Lautstärke und Abstand}
@@ -123,7 +138,7 @@ Bei bekanntem Abstand zur Straße kann die Aufnahme auf Hochpunkte im Schalldruc
     \end{subfigure}
     \begin{subfigure}{.5\textwidth}
         \centering
-        \includegraphics[width=.95\linewidth]{VersuchsaufbauAbstandsmessung}
+        \includegraphics[width=.95\linewidth]{VersuchsaufbauAbstandsmessung_downscaled}
         \caption{Im Freien}
         \label{img:dist_free_field}
     \end{subfigure}
@@ -131,11 +146,11 @@ Bei bekanntem Abstand zur Straße kann die Aufnahme auf Hochpunkte im Schalldruc
     \label{img:versuche_abstand}
 \end{figure}
 
-Zuerst wurde eine Messreihe zum Verhältnis zwischen Lautstärke und Abstand im Innenraum durchgeführt. Hierfür wurde ein im Eck stehender Lautsprecher und ein Messmikrofon auf einem Stativ gegenübergestellt (siehe \autoref{img:dist_room}). Bei verschiedenen Abständen wurde zunächst ein \(1 kHz\)-Ton über den Lautsprecher abgespielt und vom Mikrofon aufgenommen. Bei der Auswertung der Messergebnisse stellte sich heraus, dass der Innenraum bei bestimmten Abständen die Töne „verschluckt“, da durch Reflexionen der Schallwelle an den Innenwänden des Raumes an diesen Punkten eine destruktive Interferenz entsteht. Da das Interferenzmuster von der Frequenz der Schallwelle abhängt, wurde anschließend der gleiche Versuch mit einem weißen Rauschen als ausgesendetes Geräusch verwendet, um durch das breite Frequenzspektrum die Tiefpunkte der Lautstärke zu vermeiden. Zur Berechnung des effektiven Schalldruckpegels wurde das Programm „Audacity“ \footcite{Audacity} und dessen „Measure RMS“-Funktion verwendet.
+Zuerst wurde eine Messreihe zum Verhältnis zwischen Lautstärke und Abstand im Innenraum durchgeführt. Hierfür wurde ein im Eck stehender Lautsprecher und ein Messmikrofon auf einem Stativ gegenübergestellt (siehe \autoref{img:dist_room}). Bei verschiedenen Abständen wurde zunächst ein \(1 kHz\)-Ton über den Lautsprecher abgespielt und vom Mikrofon aufgenommen. Bei der Auswertung der Messergebnisse stellte sich heraus, dass der Innenraum bei bestimmten Abständen die Töne „verschluckt“, da durch Reflexionen der Schallwelle an den Innenwänden des Raumes an diesen Punkten eine destruktive Interferenz entsteht. Da das Interferenzmuster von der Frequenz der Schallwelle abhängt, wurde anschließend der gleiche Versuch mit einem weißen Rauschen als ausgesendetes Geräusch verwendet, um durch das breite Frequenzspektrum die Tiefpunkte der Lautstärke zu vermeiden. Zur Berechnung des effektiven Schalldruckpegels wurde das Programm „Audacity“ \cite{Audacity} und dessen „Measure RMS“-Funktion verwendet.
 
 Bei der Auswertung der Aufnahmen stellte sich heraus, dass für Abstandsverdoppelung der Schalldruckpegel um etwa \(4 dB\) absank, was nur zwei Drittel der erwarteten Absenkung entspricht. Diese Abweichung lässt sich auf den Versuchsaufbau zurückführen: Der Lautsprecher stellt in seiner aktuellen Aufstellung eine gerichtete Schallquelle dar, der verwendete Innenraum ist nicht reflexionsarm. Beides sind Ausschlusskriterien für die Anwendbarkeit des reziproken Abstandsgesetzes, da der Pegelabfall dadurch geringer ausfällt.
 
-Um beide Probleme zu beheben, wurde ein zweiter Versuch durchgeführt. Dieser fand im Freien statt, um Reflexionen an Wänden zu vermeiden. Zudem wurde der verwendete Lautsprecher mit seiner Membran (Chassis) nach oben ausgerichtet, das Mikrofon wurde für die Entfernungsmessung jedoch weiterhin in der Horizontalen bewegt. Somit kann die Schallquelle näherungsweise als Quelle mit kugel- bzw. halbkugelförmiger Charakteristik betrachtet werden, ähnlich wie es ein vorbeifahrendes Fahrzeug darstellt. Es wurden drei Messreihen aufgestellt, die ersten beiden davon mit gleicher Ausgabeamplitude des Lautsprechers, die dritte mit geringerer Amplitude.
+Um beide Probleme zu beheben, wurde ein zweiter Versuch durchgeführt. Dieser fand im Freien statt, um Reflexionen an Wänden zu vermeiden. Zudem wurde der verwendete Lautsprecher mit seiner Membran (Chassis) nach oben ausgerichtet, das Mikrofon wurde für die Entfernungsmessung jedoch weiterhin in der Horizontalen bewegt. Somit kann die Schallquelle näherungsweise als Quelle mit kugel- bzw. halbkugelförmiger Charakteristik betrachtet werden, ähnlich wie es ein vorbeifahrendes Fahrzeug darstellt. \cite{SengpielDirektUndRaumfeld} Es wurden drei Messreihen aufgestellt, die ersten beiden davon mit gleicher Ausgabeamplitude des Lautsprechers, die dritte mit geringerer Amplitude.
 
 \begin{figure}[h]
     \begin{subfigure}{.5\textwidth}
@@ -151,11 +166,9 @@ Um beide Probleme zu beheben, wurde ein zweiter Versuch durchgeführt. Dieser fa
         \caption{Mittelwert und Vergleichsfunktion}
         \label{fig:pegelplot_avg}
     \end{subfigure}
+    \caption{Auswertung der Versuchswerte}
 \end{figure}
 
-In \autoref{fig:pegelplot_roh} sind die aufgenommenen Rohdaten aller Messreihen. Diese werden in \autoref{fig:pegelplot_avg} mit der Logarithmus-Funktion für den Bezug von Schalldruckpegel und Distanz verglichen. Es fällt auf, dass die gemittelte Pegelfunktion fast identisch mit der Logarithmus-Funktion ist, wodurch der Zusammenhang der Pegelabnahme um sechs Dezibel pro Abstandsverdoppelung bestätigt.
+In \autoref{fig:pegelplot_roh} sind die aufgenommenen, auf \(-0 dB\) normierten Rohdaten aller Messreihen. Diese werden in \autoref{fig:pegelplot_avg} mit der Logarithmus-Funktion für den Bezug von Schalldruckpegel und Distanz verglichen. Es fällt auf, dass die gemittelte empirisch gewonnene Pegelfunktion fast identisch mit der Logarithmus-Funktion ist, wodurch der Zusammenhang der Pegelabnahme um sechs Dezibel pro Abstandsverdoppelung bestätigt ist.
 
-
-http://www.sengpielaudio.com/Rechner-entfernung.htm
-
-http://www.sengpielaudio.com/Rechner-abstandsgesetz.htm
+\input{sections/(2-a)ProgrammatischeAnalyse.tex}
