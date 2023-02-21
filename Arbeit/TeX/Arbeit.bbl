@@ -17,6 +17,17 @@
 \endgroup
 
 \datalist[entry]{nty/global//global/global}
+  \entry{BushnellRadarGun}{online}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{title}{Bushnell Radar Gun}
+    \verb{url}
+    \verb https://www.bushnell.com/additional-products/speed-guns/velocity-spee
+    \verb d-gun/BU-101911.html
+    \endverb
+  \endentry
+
   \entry{AnfechtenMobileMessmethoden}{online}{}
     \name{author}{1}{}{%
       {{hash=b}{%
@@ -36,6 +47,234 @@
     \verb https://www.bussgeldkatalog.org/geschwindigkeitsmessung/laser/
     \endverb
     \field{year}{2022}
+  \endentry
+
+  \entry{Python}{software}{}
+    \name{author}{1}{}{%
+      {{hash=FPS}{%
+         family={Foundation},
+         familyi={F\bibinitperiod},
+         given={Python\bibnamedelima Software},
+         giveni={P\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{FPS1}
+    \strng{fullhash}{FPS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{title}{Python ™}
+    \verb{url}
+    \verb https://www.python.org/
+    \endverb
+    \field{version}{3.9.13}
+  \endentry
+
+  \entry{PhysikAbituraufgabe}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=GSV}{%
+         family={GmbH},
+         familyi={G\bibinitperiod},
+         given={Stark\bibnamedelima Verlag},
+         giveni={S\bibinitperiod\bibinitdelim V\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{GSV1}
+    \strng{fullhash}{GSV1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{note}{Physik Abitur Haupttermin 2017, Aufgabe I, 3.}
+    \field{title}{Physik Abitur Original-Prüfungsaufgaben mit Lösungen}
+    \field{year}{2022}
+  \endentry
+
+  \entry{NumPy}{software}{}
+    \name{author}{1}{}{%
+      {{hash=N}{%
+         family={NumPy},
+         familyi={N\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{N1}
+    \strng{fullhash}{N1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{N}
+    \field{sortinithash}{N}
+    \field{title}{NumPy}
+    \verb{url}
+    \verb https://numpy.org/
+    \endverb
+    \field{version}{1.18.4}
+  \endentry
+
+  \entry{ProjectJupyter}{software}{}
+    \name{author}{2}{}{%
+      {{hash=PF}{%
+         family={Pérez},
+         familyi={P\bibinitperiod},
+         given={Fernando},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=GB}{%
+         family={Granger},
+         familyi={G\bibinitperiod},
+         given={Brian},
+         giveni={B\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{PFGB1}
+    \strng{fullhash}{PFGB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{title}{Project Jupyter}
+    \verb{url}
+    \verb https://jupyter.org/
+    \endverb
+    \field{version}{7.4.8 (Client)}
+  \endentry
+
+  \entry{SiemensRMS}{online}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{title}{Root Mean Square (RMS) and Overall Level}
+    \verb{url}
+    \verb https://community.sw.siemens.com/s/article/root-mean-square-rms-and-o
+    \verb verall-level
+    \endverb
+  \endentry
+
+  \entry{WikiSchalldruckAbstand}{online}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{title}{Schalldruck – Abstandsabhängigkeit}
+    \verb{url}
+    \verb https://de.wikipedia.org/wiki/Schalldruck#Abstandsabh%C3%A4ngigkeit
+    \endverb
+  \endentry
+
+  \entry{SengpielDirektUndRaumfeld}{online}{}
+    \name{author}{1}{}{%
+      {{hash=SE}{%
+         family={Sengpiel},
+         familyi={S\bibinitperiod},
+         given={Eberhard},
+         giveni={E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SE1}
+    \strng{fullhash}{SE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{title}{Direktfeld D (Freifeld) und Raumfeld R (Diffusfeld)}
+    \verb{url}
+    \verb http://www.sengpielaudio.com/DirektfeldUndRaumfeld.pdf
+    \endverb
+  \endentry
+
+  \entry{SengpielSchallpegelEntfernung}{online}{}
+    \name{author}{1}{}{%
+      {{hash=SE}{%
+         family={Sengpiel},
+         familyi={S\bibinitperiod},
+         given={Eberhard},
+         giveni={E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SE1}
+    \strng{fullhash}{SE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{title}{Reziprokes Abstandsgesetz 1/r für Schalldruck}
+    \verb{url}
+    \verb http://www.sengpielaudio.com/Rechner-entfernung.htm
+    \endverb
+  \endentry
+
+  \entry{Audacity}{software}{}
+    \name{author}{2}{}{%
+      {{hash=TTA}{%
+         family={Team},
+         familyi={T\bibinitperiod},
+         given={The\bibnamedelima Audacity},
+         giveni={T\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=CC}{%
+         family={Contributors},
+         familyi={C\bibinitperiod},
+         given={Community},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{TTACC1}
+    \strng{fullhash}{TTACC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \field{title}{Audacity ®}
+    \verb{url}
+    \verb https://www.audacityteam.org/
+    \endverb
+    \field{version}{3.2.1}
+  \endentry
+
+  \entry{Matplotlib}{software}{}
+    \name{author}{1}{}{%
+      {{hash=TTMD}{%
+         family={Team},
+         familyi={T\bibinitperiod},
+         given={The Matplotlib\bibnamedelima Development},
+         giveni={T\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim
+  D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{TTMD1}
+    \strng{fullhash}{TTMD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \field{title}{Matplotlib}
+    \verb{url}
+    \verb https://matplotlib.org/
+    \endverb
+    \field{version}{3.4.3}
+  \endentry
+
+  \entry{SchalldruckMessen}{online}{}
+    \name{author}{1}{}{%
+      {{hash=fUBL}{%
+         prefix={für},
+         prefixi={f\bibinitperiod},
+         family={Umwelt},
+         familyi={U\bibinitperiod},
+         given={Bayerisches\bibnamedelima Landesamt},
+         giveni={B\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{UBLf1}
+    \strng{fullhash}{UBLf1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{U}
+    \field{sortinithash}{U}
+    \field{title}{Schall messen und beurteilen}
+    \verb{url}
+    \verb https://www.lfu.bayern.de/laerm/laerm_allgemein/schall_messen_beurtei
+    \verb len/index.htm
+    \endverb
   \endentry
 \enddatalist
 \endinput

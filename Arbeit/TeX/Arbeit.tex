@@ -1,9 +1,11 @@
-\documentclass[12pt, a4paper]{article}
+\documentclass[11pt, a4paper]{article}
 \usepackage[german]{babel}
+\usepackage{icomma}
 \usepackage{import}
 \usepackage{blindtext}
 \usepackage{titling}
 \usepackage{datetime}
+\usepackage[dvipsnames]{xcolor}
 \usepackage{amsmath, pgfplots}
 \usepackage[hidelinks, breaklinks]{hyperref}
 % Links auf Gleitumgebungen springen nicht zur Beschriftung,
@@ -13,21 +15,59 @@
 \usepackage{float}
 % limit floats to stay in their section
 \usepackage[section]{placeins}
-\usepackage[top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage[top=2.5cm, bottom=2.0cm, left=2.5cm, right=2.5cm]{geometry}
 % \usepackage{showframe}
 \usepackage{xcolor}
+\usepackage{pdfpages}
+
+% add subsubsub-section
+\usepackage{titlesec}
+\setcounter{secnumdepth}{3}
 
 \usepackage{subcaption}
 \usepackage{graphicx}
-\graphicspath{{./rsc/img/(1)}{./rsc/img/(2)}}
-
-\usepackage[style=verbose-ibid,backend=bibtex]{biblatex}
-\addbibresource{\jobname.bib}
+\graphicspath{{./rsc/img/(1)}{./rsc/img/(2)}{./rsc/flowcharts}}
 
 % Umlaut-Unterstützung
 % siehe auch https://www.namsu.de/Extra/befehle/Umlaute.html
+% !! inputenc VOR biblatex laden
 \usepackage[utf8]{inputenc} % Umlaut-Unterstützung
 \usepackage[T1]{fontenc} % Umlaut-Unterstützung für Silbentrennung
+
+% \usepackage[style=verbose-ibid,backend=bibtex]{biblatex}
+% Footnote: \footcite{reference}
+\usepackage[style=numeric,backend=bibtex]{biblatex}
+% \usepackage[citestyle=numeric,bibstyle=authortitle,backend=bibtex]{biblatex}
+\addbibresource{\jobname.bib}
+
+% Enable use of \abs{value} and \norm{value} in formulas
+% See https://tex.stackexchange.com/a/43009
+\usepackage{mathtools}
+
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}
+
+% Swap the definition of \abs* and \norm*, so that \abs
+% and \norm resizes the size of the brackets, and the 
+% starred version does not.
+\makeatletter
+\let\oldabs\abs
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}
+
+\let\oldnorm\norm
+\def\norm{\@ifstar{\oldnorm}{\oldnorm*}}
+\makeatother
+
+% Use \cdot instead of '*' by default
+\usepackage{etoolbox}
+
+\makeatletter
+\patchcmd{\@fnsymbol}{*}{\ast}{}{}
+\patchcmd{\@fnsymbol}{*}{\ast}{}{}
+\patchcmd{\@fnsymbol}{*}{\ast}{}{}
+\makeatother
+
+\mathcode`\*=\cdot
 
 \pgfplotsset{compat=1.18}
 % optimize pgfplots compilation: export plot, then import into document to
@@ -122,6 +162,8 @@
 \section*{Kurzfassung}
 \addcontentsline{toc}{section}{Kurzfassung}
 
+\input{sections/(0)Kurzfassung.tex}
+
 \newpage
 
 \thispagestyle{plain}
@@ -130,7 +172,9 @@
 
 \newpage
 
-\listoftodos
+\section*{Hinweise zur Darstellung des Dokuments}
+
+Diese Ausarbeitung enthält viele Verweise auf Abbildungen, Formeln und andere Grafiken. Sollte nicht sofort ersichtlich sein, wo sich das verwiesene Element befindet, kann auf den Verweis geklickt werden, um dem Link zu folgen.
 
 \thispagestyle{plain}
 
@@ -144,15 +188,18 @@
 \input{sections/(2)VorgehensweiseMaterialienMethode.tex}
 
 \section{Ergebnisse}
+\input{sections/(3)Ergebnisse.tex}
 
 \section{Ergebnisdiskussion}
-
-Nachteil: bei dichtem Verkehr eine Trennung der Fahrzeuge ermöglicht wird.
-
-In halliger Umgebung gilt das 1/r-Gesetz nur eingeschränkt: \dots
-(siehe Wikipedia-Artikel "Schalldruck\#Abstandsabhängigkeit")
+\input{sections/(4)Ergebnisdiskussion.tex}
 
 \section{Zusammenfassung}
+\input{sections/(5)Zusammenfassung.tex}
+
+\section{Veröffentlichung des Quellcodes}
+
+\noindent
+Sämtlicher Quellcode wurde unter \href{https://github.com/vexplained/JugendForscht2022/tree/main/programming/}{GitHub/vexplained/JugendForscht2022 \emph{(Link)}} veröffentlicht.
 
 \newpage
 
@@ -163,6 +210,9 @@ In halliger Umgebung gilt das 1/r-Gesetz nur eingeschränkt: \dots
 
 \printbibliography
 
+\newpage
+
 \section{Unterstützungsleistungen}
+\input{sections/(8)Unterstützungsleistungen.tex}
 
 \end{document}
