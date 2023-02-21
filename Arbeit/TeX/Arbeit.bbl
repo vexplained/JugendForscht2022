@@ -24,7 +24,7 @@
     \field{title}{Bushnell Radar Gun}
     \verb{url}
     \verb https://www.bushnell.com/additional-products/speed-guns/velocity-spee
-    \verb d-gun/BU-101911.html
+    \verb d-gun/BU-101911.html (15.01.2023)
     \endverb
   \endentry
 
@@ -44,7 +44,8 @@
     \field{title}{Geschwindigkeitsmessung mittels Laser: Funktionsweise,
   Schwachstellen, Einspruch}
     \verb{url}
-    \verb https://www.bussgeldkatalog.org/geschwindigkeitsmessung/laser/
+    \verb https://www.bussgeldkatalog.org/geschwindigkeitsmessung/laser/ (05.01
+    \verb .2023)
     \endverb
     \field{year}{2022}
   \endentry
@@ -66,7 +67,7 @@
     \field{sortinithash}{F}
     \field{title}{Python ™}
     \verb{url}
-    \verb https://www.python.org/
+    \verb https://www.python.org/ (10.12.2022)
     \endverb
     \field{version}{3.9.13}
   \endentry
@@ -106,7 +107,7 @@
     \field{sortinithash}{N}
     \field{title}{NumPy}
     \verb{url}
-    \verb https://numpy.org/
+    \verb https://numpy.org/ (10.12.2022)
     \endverb
     \field{version}{1.18.4}
   \endentry
@@ -134,7 +135,7 @@
     \field{sortinithash}{P}
     \field{title}{Project Jupyter}
     \verb{url}
-    \verb https://jupyter.org/
+    \verb https://jupyter.org/ (10.12.2022)
     \endverb
     \field{version}{7.4.8 (Client)}
   \endentry
@@ -146,7 +147,7 @@
     \field{title}{Root Mean Square (RMS) and Overall Level}
     \verb{url}
     \verb https://community.sw.siemens.com/s/article/root-mean-square-rms-and-o
-    \verb verall-level
+    \verb verall-level (12.01.2023)
     \endverb
   \endentry
 
@@ -156,7 +157,8 @@
     \field{sortinithash}{S}
     \field{title}{Schalldruck – Abstandsabhängigkeit}
     \verb{url}
-    \verb https://de.wikipedia.org/wiki/Schalldruck#Abstandsabh%C3%A4ngigkeit
+    \verb https://de.wikipedia.org/wiki/Schalldruck#Abstandsabhängigkeit (08.0
+    \verb 1.2023)
     \endverb
   \endentry
 
@@ -177,7 +179,7 @@
     \field{sortinithash}{S}
     \field{title}{Direktfeld D (Freifeld) und Raumfeld R (Diffusfeld)}
     \verb{url}
-    \verb http://www.sengpielaudio.com/DirektfeldUndRaumfeld.pdf
+    \verb http://www.sengpielaudio.com/DirektfeldUndRaumfeld.pdf (13.01.2023)
     \endverb
   \endentry
 
@@ -198,7 +200,7 @@
     \field{sortinithash}{S}
     \field{title}{Reziprokes Abstandsgesetz 1/r für Schalldruck}
     \verb{url}
-    \verb http://www.sengpielaudio.com/Rechner-entfernung.htm
+    \verb http://www.sengpielaudio.com/Rechner-entfernung.htm (13.01.2023)
     \endverb
   \endentry
 
@@ -225,7 +227,7 @@
     \field{sortinithash}{T}
     \field{title}{Audacity ®}
     \verb{url}
-    \verb https://www.audacityteam.org/
+    \verb https://www.audacityteam.org/ (05.10.2022)
     \endverb
     \field{version}{3.2.1}
   \endentry
@@ -248,7 +250,7 @@
     \field{sortinithash}{T}
     \field{title}{Matplotlib}
     \verb{url}
-    \verb https://matplotlib.org/
+    \verb https://matplotlib.org/ (10.12.2022)
     \endverb
     \field{version}{3.4.3}
   \endentry
@@ -273,7 +275,7 @@
     \field{title}{Schall messen und beurteilen}
     \verb{url}
     \verb https://www.lfu.bayern.de/laerm/laerm_allgemein/schall_messen_beurtei
-    \verb len/index.htm
+    \verb len/index.htm (13.01.2023)
     \endverb
   \endentry
 \enddatalist

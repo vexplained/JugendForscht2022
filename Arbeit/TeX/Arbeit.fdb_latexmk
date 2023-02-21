@@ -1,21 +1,21 @@
 # Fdb version 3
-["bibtex Arbeit"] 1673819118 "Arbeit.aux" "Arbeit.bbl" "Arbeit" 1673820061
-  "Arbeit-blx.bib" 1673820060 340 25674e554aa25e98ea59ec40797d70f1 "pdflatex"
-  "Arbeit.aux" 1673820060 12256 214876c6ffa5778404ba99a3104a0e8a "pdflatex"
-  "Arbeit.bib" 1673813833 3729 be29b1f846743761658a24de1c454520 ""
+["bibtex Arbeit"] 1673820705 "Arbeit.aux" "Arbeit.bbl" "Arbeit" 1673820712
+  "Arbeit-blx.bib" 1673820711 340 25674e554aa25e98ea59ec40797d70f1 "pdflatex"
+  "Arbeit.aux" 1673820711 12256 54f1fb04306d4c2a9de60eb0d435f5b6 "pdflatex"
+  "Arbeit.bib" 1673820695 3907 d35cebc864df268e04780562677c84f1 ""
   "c:/texlive/2022/texmf-dist/bibtex/bst/biblatex/biblatex.bst" 1667142256 65483 3b5a53ada692a06ce416d088de6a391b ""
   (generated)
   "Arbeit.bbl"
   "Arbeit.blg"
-["pdflatex"] 1673820054 "c:/Levin/Schule/JugendForscht/Arbeit/TeX/Arbeit.tex" "Arbeit.pdf" "Arbeit" 1673820061
-  "Arbeit.aux" 1673820060 12256 214876c6ffa5778404ba99a3104a0e8a "pdflatex"
-  "Arbeit.bbl" 1673819118 7633 88d503ba4408b154b97033a1ba354b5a "bibtex Arbeit"
-  "Arbeit.lof" 1673820060 1354 cfe0d5e48bfcacb95cc7a9d06c923872 "pdflatex"
-  "Arbeit.out" 1673820060 5673 e62d22bb3febf94ad6b7775399b08854 "pdflatex"
-  "Arbeit.run.xml" 1673820060 2535 d0750f3a1fb726141207c2a6211f771f "pdflatex"
-  "Arbeit.tex" 1673819947 5654 896ee43036b877de73f1713766813621 ""
-  "Arbeit.toc" 1673820060 2525 08b582be720334098e8de86a36074966 "pdflatex"
-  "c:/Levin/Schule/JugendForscht/Arbeit/TeX/Arbeit.tex" 1673819947 5654 896ee43036b877de73f1713766813621 ""
+["pdflatex"] 1673820705 "c:/Levin/Schule/JugendForscht/Arbeit/TeX/Arbeit.tex" "Arbeit.pdf" "Arbeit" 1673820712
+  "Arbeit.aux" 1673820711 12256 54f1fb04306d4c2a9de60eb0d435f5b6 "pdflatex"
+  "Arbeit.bbl" 1673820705 7807 c8d64273088a27b9f8ba60b983f311fa "bibtex Arbeit"
+  "Arbeit.lof" 1673820711 1354 cfe0d5e48bfcacb95cc7a9d06c923872 "pdflatex"
+  "Arbeit.out" 1673820711 5673 e62d22bb3febf94ad6b7775399b08854 "pdflatex"
+  "Arbeit.run.xml" 1673820711 2535 d0750f3a1fb726141207c2a6211f771f "pdflatex"
+  "Arbeit.tex" 1673820697 5654 896ee43036b877de73f1713766813621 ""
+  "Arbeit.toc" 1673820711 2525 08b582be720334098e8de86a36074966 "pdflatex"
+  "c:/Levin/Schule/JugendForscht/Arbeit/TeX/Arbeit.tex" 1673820697 5654 896ee43036b877de73f1713766813621 ""
   "c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1667142664 2971 def0b6c1f0b107b3b936def894055589 ""
   "c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1667142664 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1667143569 3524 cb3e574dea2d1052e39280babc910dc8 ""

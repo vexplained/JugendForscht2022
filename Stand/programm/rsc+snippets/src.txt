@@ -1,0 +1,3 @@
+Car SVG: https://www.svgrepo.com/svg/166983/car-top-view	(CC0 License / Public Domain); Zugriff Zugriff 29.01.2023
+
+Segment Display (JS Canvas): http://www.3quarks.com/en/SegmentDisplay/	(CC3 License; Rüdiger Appel, veröffentlicht Juni 2012); Zugriff 29.01.2023

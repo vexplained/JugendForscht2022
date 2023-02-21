@@ -93,6 +93,25 @@ def plot_graph(plot_title: str, axis_name: str, points_x, points_val, graph_x, g
     plt.show()
 
 
+def plot_4_curves__vs_time(data1, data2, data3, data4, steps_per_second, y_axis_title):
+    x1 = np.linspace(0, len(data1) / steps_per_second, len(data1))
+    x2 = np.linspace(0, len(data2) / steps_per_second, len(data2))
+    x3 = np.linspace(0, len(data3) / steps_per_second, len(data3))
+    x4 = np.linspace(0, len(data4) / steps_per_second, len(data4))
+
+    plt.figure()
+    fig, ax = plt.subplots()
+    ax.plot(x1, data1)
+    ax.plot(x2, data2)
+    ax.plot(x3, data3)
+    ax.plot(x4, data4)
+    ax.set_xlabel("Verstrichene Zeit [s]")
+    ax.set_ylabel(y_axis_title)
+    plt.title(f"{y_axis_title} gegen Zeit")
+    plt.show()
+
+
+
 def create_pdf_text_page(filename: str, text: str, page_size=pagesizes.landscape(pagesizes.A5)):
     global A5
 
@@ -121,3 +140,4 @@ def create_pdf_text_page(filename: str, text: str, page_size=pagesizes.landscape
         output = PdfWriter()
         output.add_page(new_pdf.pages[0])
         output.write(outStream)
+
