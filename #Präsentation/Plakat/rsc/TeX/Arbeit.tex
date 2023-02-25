@@ -1,0 +1,26 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage{import}
+\usepackage{amsmath, pgfplots}
+\usepackage[top=2.5cm, bottom=2.0cm, left=2.5cm, right=2.5cm]{geometry}
+
+\usepackage{graphicx}
+
+\pgfplotsset{compat=1.18}
+% optimize pgfplots compilation: export plot, then import into document to
+% prevent unnecessary recompilation
+\usepgfplotslibrary{groupplots, external}
+\tikzexternalize[prefix=cache/]
+% import additional pgfplots/tikz libraries (for plotting)
+\usepgfplotslibrary{polar, patchplots, colorbrewer}
+\usetikzlibrary{calc, positioning}
+
+\begin{document}
+
+\begin{figure}[h]
+    \import{rsc/}{frequenz-zeit-plot.tex}
+\end{figure}
+
+\begin{figure}[h]
+    \import{rsc/}{pegel-zeit-plot.tex}
+\end{figure}
+\end{document}

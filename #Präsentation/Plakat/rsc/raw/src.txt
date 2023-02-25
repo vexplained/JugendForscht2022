@@ -1,0 +1,20 @@
+istockphoto-1206216752-1024x1024.jpg	Sugu Crazy, https://media.istockphoto.com/id/1206216752/de/vektor/radarpistole-flache-vektor-symbol-f%C3%BCr-apps-und-websites.jpg?s=612x612&w=0&k=20&c=AfdmL5LVyZNMSwkoFmH7_CrbrKn1jn4aVg9uNpdZCEA=
+	\-> nachbearbeitet
+
+blitzer-mit-icon.jpg	https://cdn.antenne.de/rockantenne-de/uploads/images/verkehr/blitzer-mit-icon.jpg
+
+one-dollar-coins-svgrepo-com.svg	https://www.svgrepo.com/svg/101745/one-dollar-coins
+
+smartphone-svgrepo-com.svg	https://www.svgrepo.com/svg/506680/smartphone
+
+eye-svgrepo-com.svg	https://www.svgrepo.com/svg/503023/eye
+
+eye-off-svgrepo-com.svg		https://www.svgrepo.com/svg/502655/eye-off
+
+speaker-wave-2-svgrepo-com.svg	https://www.svgrepo.com/svg/491488/speaker-wave-2
+
+car-svgrepo-com.svg	https://www.svgrepo.com/svg/500805/car
+
+microphone-svgrepo-com.svg	https://www.svgrepo.com/svg/505941/microphone
+
+car-side-svgrepo-com.svg	https://www.svgrepo.com/svg/503246/car
