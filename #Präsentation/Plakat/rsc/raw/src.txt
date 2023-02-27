@@ -18,3 +18,7 @@ car-svgrepo-com.svg	https://www.svgrepo.com/svg/500805/car
 microphone-svgrepo-com.svg	https://www.svgrepo.com/svg/505941/microphone
 
 car-side-svgrepo-com.svg	https://www.svgrepo.com/svg/503246/car
+
+plus-circle-svgrepo-com.svg	https://www.svgrepo.com/svg/506282/plus-circle
+
+minus-circle-svgrepo-com.svg	https://www.svgrepo.com/svg/506258/minus-circle
