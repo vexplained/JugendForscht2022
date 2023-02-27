@@ -21,7 +21,7 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.11</version>
+      <version>[4.13.1,)</version>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -33,6 +33,25 @@
       <groupId>org.openjfx</groupId>
       <artifactId>javafx-fxml</artifactId>
       <version>19</version>
+    </dependency>
+    <dependency>
+      <groupId>de.vexplained</groupId>
+      <artifactId>stdGraphics</artifactId>
+      <version>1.0</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/lib/GraphicsLibrary_java8.jar</systemPath>
+    </dependency>
+    <dependency>
+        <groupId>com.formdev</groupId>
+        <artifactId>flatlaf</artifactId>
+        <version>2.4</version>
+        <scope>compile</scope> <!-- NOT runtime (maven template is faulty) -->
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+    <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-lang3</artifactId>
+        <version>3.12.0</version>
     </dependency>
   </dependencies>
 
