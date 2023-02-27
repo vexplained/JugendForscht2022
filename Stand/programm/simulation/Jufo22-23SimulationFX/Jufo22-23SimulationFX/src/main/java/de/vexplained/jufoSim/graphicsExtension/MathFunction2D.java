@@ -1,7 +1,6 @@
 package de.vexplained.jufoSim.graphicsExtension;
 
-import java.util.function.DoubleFunction;
-
-public abstract class MathFunction2D implements DoubleFunction<Double>
+public abstract class MathFunction2D
 {
+	public abstract double y(double x);
 }

@@ -1,6 +1,8 @@
 package de.vexplained.jufoSim;
 
+import java.awt.BasicStroke;
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
@@ -13,6 +15,10 @@ import javax.swing.JTabbedPane;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
+import org.apache.commons.lang3.tuple.ImmutablePair;
+
+import de.vexplained.jufoSim.graphicsExtension.DynamicFunctionPlot;
+import de.vexplained.jufoSim.graphicsExtension.MathFunction2D;
 import de.vexplained.stdGraphics.DynamicCanvas;
 
 /**
@@ -24,7 +30,7 @@ public class MainGUI
 
 	private JFrame frame;
 	private DynamicCanvas canvasDoppler;
-	private DynamicCanvas canvasAmplitude;
+	private DynamicCanvas canvasLevel;
 
 	/**
 	 * Launch the application.
@@ -119,10 +125,88 @@ public class MainGUI
 		panel.add(displayPanel, gbc_displayPanel);
 
 		canvasDoppler = new DynamicCanvas();
+		canvasDoppler.setBackground(Color.WHITE);
 		displayPanel.addTab("Dopplereffekt", null, canvasDoppler, null);
 
-		canvasAmplitude = new DynamicCanvas();
-		displayPanel.addTab("Pegel\u00E4nderung", null, canvasAmplitude, null);
+		canvasLevel = new DynamicCanvas();
+		canvasLevel.setBackground(Color.WHITE);
+		displayPanel.addTab("Pegel\u00E4nderung", null, canvasLevel, null);
+
+		MathFunction2D funcDoppler = new MathFunction2D()
+		{
+			private double hoch = 3d;
+			private double tief = -3d;
+			private double d = 5d;
+
+			private double inter_y(double x)
+			{
+				return hoch * Math.sin(Math.PI / 2d * (x / d));
+			}
+
+			@Override
+			public double y(double x)
+			{
+				if (x < -d)
+				{
+					return -hoch;
+				} else if (x > d)
+				{
+					return -tief;
+				} else
+				{
+					return inter_y(x);
+				}
+			}
+		};
+
+		DynamicFunctionPlot plotDoppler = new DynamicFunctionPlot(Color.BLUE, false,
+				new ImmutablePair<Double, Double>(-10d, 10d),
+				new BasicStroke(2, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND), 500, funcDoppler);
+
+		canvasDoppler.addObject(plotDoppler);
+
+		MathFunction2D funcLevel = new MathFunction2D()
+		{
+			private double d = 1.6612089648975;
+
+			private double links(double x)
+			{
+				return -20 * Math.log10(-x);
+			}
+
+			private double inter(double x)
+			{
+				return -1.5975 * x * x;
+			}
+
+			private double rechts(double x)
+			{
+				return links(-x);
+			}
+
+			@Override
+			public double y(double x)
+			{
+				double result = 0;
+				if (x < -d)
+				{
+					return links(x);
+				} else if (x > d)
+				{
+					return rechts(x);
+				} else
+				{
+					return inter(x);
+				}
+			}
+		};
+
+		DynamicFunctionPlot plotLevel = new DynamicFunctionPlot(Color.RED, false,
+				new ImmutablePair<Double, Double>(-10d, 10d),
+				new BasicStroke(2, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND), 500, funcLevel);
+
+		canvasDoppler.addObject(plotLevel);
+		canvasLevel.addObject(plotLevel);
 	}
 
 }

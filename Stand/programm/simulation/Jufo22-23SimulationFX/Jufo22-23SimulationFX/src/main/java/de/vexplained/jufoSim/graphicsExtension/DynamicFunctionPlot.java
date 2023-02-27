@@ -2,7 +2,16 @@ package de.vexplained.jufoSim.graphicsExtension;
 
 import java.awt.Color;
 import java.awt.Graphics2D;
+import java.awt.Rectangle;
 import java.awt.Stroke;
+import java.awt.geom.Path2D;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.DoubleSummaryStatistics;
+
+import javax.imageio.ImageIO;
 
 import org.apache.commons.lang3.tuple.ImmutablePair;
 
@@ -25,6 +34,11 @@ public class DynamicFunctionPlot extends DynamicObject
 	private double[][] functionArrayBuffer;
 
 	/**
+	 * Margin at the edges of the viewport, in pixels.
+	 */
+	private int viewportMargin = 10;
+
+	/**
 	 * Draws a plot of the specified function.
 	 * 
 	 * @param xdomain
@@ -33,7 +47,7 @@ public class DynamicFunctionPlot extends DynamicObject
 	public DynamicFunctionPlot(Color color, ImmutablePair<Double, Double> xdomain, Stroke stroke,
 			MathFunction2D function)
 	{
-		this(color, true, xdomain, stroke, function, 0);
+		this(color, true, xdomain, stroke, 0, function);
 	}
 
 	/**
@@ -41,10 +55,10 @@ public class DynamicFunctionPlot extends DynamicObject
 	 *            The x-domain to calculate and plot function values for.
 	 */
 	public DynamicFunctionPlot(Color color, boolean drawAxis, ImmutablePair<Double, Double> xdomain, Stroke stroke,
-			MathFunction2D function, int numberOfPointsToCalculate)
+			int numberOfPointsToCalculate, MathFunction2D function)
 	{
-		this(color, drawAxis, xdomain, new ImmutablePair<Double, Double>(0d, 0d), stroke, function,
-				numberOfPointsToCalculate);
+		this(color, drawAxis, xdomain, new ImmutablePair<Double, Double>(0d, 0d), stroke, numberOfPointsToCalculate,
+				function);
 	}
 
 	/**
@@ -56,7 +70,7 @@ public class DynamicFunctionPlot extends DynamicObject
 	public DynamicFunctionPlot(Color color, ImmutablePair<Double, Double> xdomain,
 			ImmutablePair<Double, Double> ydomain, Stroke stroke, MathFunction2D function)
 	{
-		this(color, true, xdomain, ydomain, stroke, function, 0);
+		this(color, true, xdomain, ydomain, stroke, 0, function);
 	}
 
 	/**
@@ -66,8 +80,8 @@ public class DynamicFunctionPlot extends DynamicObject
 	 *            The y-domain used to limit which values should be displayed.
 	 */
 	public DynamicFunctionPlot(Color color, boolean drawAxis, ImmutablePair<Double, Double> xdomain,
-			ImmutablePair<Double, Double> ydomain, Stroke stroke, MathFunction2D function,
-			int numberOfPointsToCalculate)
+			ImmutablePair<Double, Double> ydomain, Stroke stroke, int numberOfPointsToCalculate,
+			MathFunction2D function)
 	{
 		super(color, 0, 0, stroke);
 		this.drawAxis = drawAxis;
@@ -79,6 +93,8 @@ public class DynamicFunctionPlot extends DynamicObject
 				^ System.identityHashCode(this.numberOfPointsToCalculate);
 
 		this.functionArrayBuffer = new double[2][0];
+
+		this.functionArrayBuffer = calculateFunctionValues();
 	}
 
 	@Override
@@ -99,11 +115,84 @@ public class DynamicFunctionPlot extends DynamicObject
 			this.functionArrayBuffer = calculateFunctionValues();
 		}
 
-		// draw stuff here
-		for (double[] element : this.functionArrayBuffer)
-		{
+		// calculate viewport
+		DoubleSummaryStatistics statsX = Arrays.stream(this.functionArrayBuffer[0]).summaryStatistics();
+		DoubleSummaryStatistics statsY = Arrays.stream(this.functionArrayBuffer[1]).summaryStatistics();
 
+		double minValueX = statsX.getMin();
+		double maxValueX = statsX.getMax();
+		double minValueY = statsY.getMin();
+		double maxValueY = statsY.getMax();
+		// get canvas size; assumes that clip has not been set
+		Rectangle canvasDim = g2d.getClipBounds();
+		int canvasMinX = (int) canvasDim.getX() + viewportMargin;
+		int canvasMaxX = (int) canvasDim.getMaxX() - viewportMargin;
+		// invert y-axis!
+		int canvasMinY = (int) canvasDim.getMaxY() - viewportMargin;
+		int canvasMaxY = (int) canvasDim.getY() + viewportMargin;
+		int canvasWidth = (int) canvasDim.getWidth() - 2 * viewportMargin;
+		int canvasHeight = (int) canvasDim.getHeight() - 2 * viewportMargin;
+
+		// draw coordinate system
+		// FIXME implement coordinate system display
+		// TODO draw in the center of the screen when possible
+
+		// draw function plot
+		g2d.setColor(color);
+
+		Path2D.Double funcPath = new Path2D.Double(Path2D.WIND_NON_ZERO, this.functionArrayBuffer[0].length);
+
+		double prevX = mapToRange(this.functionArrayBuffer[0][0], minValueX, maxValueX, canvasMinX, canvasMaxX - 1);
+		double prevY = mapToRange(this.functionArrayBuffer[1][1], minValueY, maxValueY, canvasMinY, canvasMaxY - 1);
+		funcPath.moveTo(prevX, prevY);
+		for (int i = 1; i < this.functionArrayBuffer[0].length; i++)
+		{
+			double xPos = mapToRange(this.functionArrayBuffer[0][i], minValueX, maxValueX, canvasMinX, canvasMaxX - 1);
+			double yPos = mapToRange(this.functionArrayBuffer[1][i], minValueY, maxValueY, canvasMinY, canvasMaxY - 1);
+
+			funcPath.lineTo(xPos, yPos);
 		}
+
+		g2d.draw(funcPath);
+	}
+
+	private void saveBIToFile(BufferedImage img)
+	{
+		try
+		{
+			File outputfile = new File("image.png");
+			if (!outputfile.exists())
+			{
+				outputfile.createNewFile();
+			}
+			ImageIO.write(img, "png", outputfile);
+		} catch (IOException e)
+		{
+			e.printStackTrace();
+		}
+
+	}
+
+	/**
+	 * @param value
+	 *            the value to map into the range
+	 * @param valMin
+	 *            the minimum of the range of <code>value</code>
+	 * @param valMax
+	 *            the maximum of the range of <code>value</code>
+	 * @param outMin
+	 *            the minimum of the range of the returned result
+	 * @param outMax
+	 *            the maximum of the range of the returned result
+	 */
+	private double mapToRange(double value, double valMin, double valMax, double outMin, double outMax)
+	{
+		return (outMax - outMin) * (value - valMin) / (valMax - valMin) + outMin;
+	}
+
+	private double clamp(double value, double min, double max)
+	{
+		return Math.min(Math.max(value, min), max);
 	}
 
 	/**
@@ -122,9 +211,9 @@ public class DynamicFunctionPlot extends DynamicObject
 		double upper = Math.max(xdomain.getLeft(), xdomain.getRight());
 		for (int i = 0; i < this.numberOfPointsToCalculate; i++)
 		{
-			double xVal = i * interval;
+			double xVal = i * interval + lower;
 			result[0][i] = xVal;
-			result[1][i] = this.function.apply(xVal);
+			result[1][i] = this.function.y(xVal);
 		}
 
 		return result;
