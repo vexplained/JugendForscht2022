@@ -5,13 +5,8 @@ import java.awt.Graphics2D;
 import java.awt.Rectangle;
 import java.awt.Stroke;
 import java.awt.geom.Path2D;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
 import java.util.Arrays;
 import java.util.DoubleSummaryStatistics;
-
-import javax.imageio.ImageIO;
 
 import org.apache.commons.lang3.tuple.ImmutablePair;
 
@@ -88,13 +83,11 @@ public class DynamicFunctionPlot extends DynamicObject
 		this.xdomain = xdomain;
 		this.ydomain = ydomain;
 		this.function = function;
-		this.numberOfPointsToCalculate = numberOfPointsToCalculate > 0 ? numberOfPointsToCalculate : 100;
-		this.changeablesHashcode = this.xdomain.hashCode() ^ this.ydomain.hashCode()
-				^ System.identityHashCode(this.numberOfPointsToCalculate);
+		this.numberOfPointsToCalculate = numberOfPointsToCalculate >= 0 ? numberOfPointsToCalculate : 0;
+		this.changeablesHashcode = this.xdomain.hashCode() ^ this.ydomain.hashCode() ^ this.numberOfPointsToCalculate
+				^ this.function.hashCode();
 
 		this.functionArrayBuffer = new double[2][0];
-
-		this.functionArrayBuffer = calculateFunctionValues();
 	}
 
 	@Override
@@ -103,26 +96,61 @@ public class DynamicFunctionPlot extends DynamicObject
 		return false;
 	}
 
+	public boolean doesDrawAxis()
+	{
+		return drawAxis;
+	}
+
+	public void setDrawAxis(boolean drawAxis)
+	{
+		this.drawAxis = drawAxis;
+		invalidate();
+	}
+
+	public ImmutablePair<Double, Double> getXdomain()
+	{
+		return xdomain;
+	}
+
+	public void setXdomain(ImmutablePair<Double, Double> xdomain)
+	{
+		this.xdomain = xdomain;
+		invalidate();
+	}
+
+	public ImmutablePair<Double, Double> getYdomain()
+	{
+		return ydomain;
+	}
+
+	public void setYdomain(ImmutablePair<Double, Double> ydomain)
+	{
+		this.ydomain = ydomain;
+		invalidate();
+	}
+
+	public int getNumberOfPointsToCalculate()
+	{
+		return numberOfPointsToCalculate;
+	}
+
+	public void setNumberOfPointsToCalculate(int numberOfPointsToCalculate)
+	{
+		this.numberOfPointsToCalculate = numberOfPointsToCalculate;
+		invalidate();
+	}
+
+	public void setFunction(MathFunction2D newFunction)
+	{
+		this.function = newFunction;
+		invalidate();
+	}
+
 	@Override
 	protected void _draw(Graphics2D g2d)
 	{
 		// TODO implement ydomain
 
-		int newHashcode = this.xdomain.hashCode() ^ this.ydomain.hashCode()
-				^ System.identityHashCode(this.numberOfPointsToCalculate);
-		if (this.changeablesHashcode != newHashcode)
-		{
-			this.functionArrayBuffer = calculateFunctionValues();
-		}
-
-		// calculate viewport
-		DoubleSummaryStatistics statsX = Arrays.stream(this.functionArrayBuffer[0]).summaryStatistics();
-		DoubleSummaryStatistics statsY = Arrays.stream(this.functionArrayBuffer[1]).summaryStatistics();
-
-		double minValueX = statsX.getMin();
-		double maxValueX = statsX.getMax();
-		double minValueY = statsY.getMin();
-		double maxValueY = statsY.getMax();
 		// get canvas size; assumes that clip has not been set
 		Rectangle canvasDim = g2d.getClipBounds();
 		int canvasMinX = (int) canvasDim.getX() + viewportMargin;
@@ -133,8 +161,32 @@ public class DynamicFunctionPlot extends DynamicObject
 		int canvasWidth = (int) canvasDim.getWidth() - 2 * viewportMargin;
 		int canvasHeight = (int) canvasDim.getHeight() - 2 * viewportMargin;
 
+		int tempNumberOfPointsToCalculate = this.numberOfPointsToCalculate;
+		// resolution: a point every 10px
+		if (tempNumberOfPointsToCalculate == 0)
+		{
+			tempNumberOfPointsToCalculate = Math.round(canvasWidth / 10f);
+		}
+
+		int newHashcode = this.xdomain.hashCode() ^ this.ydomain.hashCode() ^ this.numberOfPointsToCalculate
+				^ this.function.hashCode() ^ canvasWidth;
+		if (this.changeablesHashcode != newHashcode || this.functionArrayBuffer[0].length <= 0)
+		{
+			this.functionArrayBuffer = calculateFunctionValues(tempNumberOfPointsToCalculate);
+			this.changeablesHashcode = newHashcode;
+		}
+
+		// calculate viewport
+		DoubleSummaryStatistics statsX = Arrays.stream(this.functionArrayBuffer[0]).summaryStatistics();
+		DoubleSummaryStatistics statsY = Arrays.stream(this.functionArrayBuffer[1]).summaryStatistics();
+
+		double minValueX = statsX.getMin();
+		double maxValueX = statsX.getMax();
+		double minValueY = statsY.getMin();
+		double maxValueY = statsY.getMax();
+
 		// draw coordinate system
-		// FIXME implement coordinate system display
+		// TODO implement coordinate system display
 		// TODO draw in the center of the screen when possible
 
 		// draw function plot
@@ -150,27 +202,19 @@ public class DynamicFunctionPlot extends DynamicObject
 			double xPos = mapToRange(this.functionArrayBuffer[0][i], minValueX, maxValueX, canvasMinX, canvasMaxX - 1);
 			double yPos = mapToRange(this.functionArrayBuffer[1][i], minValueY, maxValueY, canvasMinY, canvasMaxY - 1);
 
-			funcPath.lineTo(xPos, yPos);
+			double midX = (xPos + prevX) / 2d;
+			double midY = (yPos + prevY) / 2d;
+
+			// smooth out using a Bezier curve
+			// @see https://stackoverflow.com/a/34571723/19474335
+			funcPath.quadTo(prevX, prevY, midX, midY);
+
+			prevX = xPos;
+			prevY = yPos;
 		}
+		funcPath.lineTo(prevX, prevY);
 
 		g2d.draw(funcPath);
-	}
-
-	private void saveBIToFile(BufferedImage img)
-	{
-		try
-		{
-			File outputfile = new File("image.png");
-			if (!outputfile.exists())
-			{
-				outputfile.createNewFile();
-			}
-			ImageIO.write(img, "png", outputfile);
-		} catch (IOException e)
-		{
-			e.printStackTrace();
-		}
-
 	}
 
 	/**
@@ -201,15 +245,15 @@ public class DynamicFunctionPlot extends DynamicObject
 	 * @return a 2-dimensional array consisting of two rows: <code>[double[], double[]]</code>. The first array contains
 	 *         the x-values, the second array contains the y-values.
 	 */
-	private double[][] calculateFunctionValues()
+	private double[][] calculateFunctionValues(int numberOfPointsToCalculate)
 	{
-		double[][] result = new double[2][this.numberOfPointsToCalculate];
+		double[][] result = new double[2][numberOfPointsToCalculate];
 
 		// Calculate interval to calculate values in
-		double interval = Math.abs(xdomain.getRight() - xdomain.getLeft()) / (this.numberOfPointsToCalculate - 1);
+		double interval = Math.abs(xdomain.getRight() - xdomain.getLeft()) / (numberOfPointsToCalculate - 1);
 		double lower = Math.min(xdomain.getLeft(), xdomain.getRight());
 		double upper = Math.max(xdomain.getLeft(), xdomain.getRight());
-		for (int i = 0; i < this.numberOfPointsToCalculate; i++)
+		for (int i = 0; i < numberOfPointsToCalculate; i++)
 		{
 			double xVal = i * interval + lower;
 			result[0][i] = xVal;
@@ -219,48 +263,8 @@ public class DynamicFunctionPlot extends DynamicObject
 		return result;
 	}
 
-	/* ======================================= */
-	/* ========= Getters and Setters ========= */
-	/* ======================================= */
-
-	public boolean isDrawAxis()
+	public void invalidateFunction()
 	{
-		return drawAxis;
+		super.invalidate();
 	}
-
-	public void setDrawAxis(boolean drawAxis)
-	{
-		this.drawAxis = drawAxis;
-	}
-
-	public ImmutablePair<Double, Double> getXdomain()
-	{
-		return xdomain;
-	}
-
-	public void setXdomain(ImmutablePair<Double, Double> xdomain)
-	{
-		this.xdomain = xdomain;
-	}
-
-	public ImmutablePair<Double, Double> getYdomain()
-	{
-		return ydomain;
-	}
-
-	public void setYdomain(ImmutablePair<Double, Double> ydomain)
-	{
-		this.ydomain = ydomain;
-	}
-
-	public int getNumberOfPointsToCalculate()
-	{
-		return numberOfPointsToCalculate;
-	}
-
-	public void setNumberOfPointsToCalculate(int numberOfPointsToCalculate)
-	{
-		this.numberOfPointsToCalculate = numberOfPointsToCalculate;
-	}
-
 }
