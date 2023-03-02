@@ -4,10 +4,14 @@ import java.awt.BasicStroke;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.EventQueue;
+import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
+import javax.swing.JCheckBox;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JSlider;
@@ -34,8 +38,9 @@ public class MainGUI
 
 	private JFrame frame;
 	private DynamicCanvas canvasDoppler;
-	private DynamicCanvas canvasLevel;
 	private DecimalSlider sliderDist;
+	private DynamicFunctionPlot plotDoppler;
+	private DynamicFunctionPlot plotLevel;
 
 	/**
 	 * Launch the application.
@@ -97,16 +102,16 @@ public class MainGUI
 		JPanel controllerPanel = new JPanel();
 		GridBagConstraints gbc_controllerPanel = new GridBagConstraints();
 		gbc_controllerPanel.gridwidth = 2;
-		gbc_controllerPanel.insets = new Insets(0, 0, 5, 0);
+		gbc_controllerPanel.insets = new Insets(5, 5, 5, 5);
 		gbc_controllerPanel.fill = GridBagConstraints.BOTH;
 		gbc_controllerPanel.gridx = 0;
 		gbc_controllerPanel.gridy = 0;
 		panel.add(controllerPanel, gbc_controllerPanel);
 		GridBagLayout gbl_controllerPanel = new GridBagLayout();
 		gbl_controllerPanel.columnWidths = new int[] { 0, 0, 0 };
-		gbl_controllerPanel.rowHeights = new int[] { 0, 0 };
+		gbl_controllerPanel.rowHeights = new int[] { 0, 0, 0 };
 		gbl_controllerPanel.columnWeights = new double[] { 2.0, 2.0, Double.MIN_VALUE };
-		gbl_controllerPanel.rowWeights = new double[] { 0.0, Double.MIN_VALUE };
+		gbl_controllerPanel.rowWeights = new double[] { 0.0, 0.0, Double.MIN_VALUE };
 		controllerPanel.setLayout(gbl_controllerPanel);
 
 		JSlider slider = new JSlider();
@@ -119,13 +124,50 @@ public class MainGUI
 		slider.setPaintLabels(true);
 		slider.setSnapToTicks(true);
 		GridBagConstraints gbc_slider = new GridBagConstraints();
+		gbc_slider.insets = new Insets(0, 0, 5, 0);
 		gbc_slider.gridwidth = 2;
 		gbc_slider.fill = GridBagConstraints.BOTH;
 		gbc_slider.gridx = 0;
 		gbc_slider.gridy = 0;
 		controllerPanel.add(slider, gbc_slider);
 
-		sliderDist = new DecimalSlider(1);
+		JCheckBox chckbxShowDoppler = new JCheckBox("Dopplereffekt anzeigen");
+		chckbxShowDoppler.setForeground(new Color(0x4484cd));
+		chckbxShowDoppler.setFont(new Font("Tahoma", Font.BOLD, 18));
+		chckbxShowDoppler.setSelected(true);
+		chckbxShowDoppler.addActionListener(new ActionListener()
+		{
+			@Override
+			public void actionPerformed(ActionEvent e)
+			{
+				plotDoppler.setVisible(chckbxShowDoppler.isSelected());
+			}
+		});
+		GridBagConstraints gbc_chckbxShowDoppler = new GridBagConstraints();
+		gbc_chckbxShowDoppler.insets = new Insets(0, 0, 0, 5);
+		gbc_chckbxShowDoppler.gridx = 0;
+		gbc_chckbxShowDoppler.gridy = 1;
+		controllerPanel.add(chckbxShowDoppler, gbc_chckbxShowDoppler);
+
+		JCheckBox chckbxShowLevel = new JCheckBox("Pegel\u00E4nderung anzeigen");
+		chckbxShowLevel.setForeground(new Color(0xdc5959));
+		chckbxShowLevel.setFont(new Font("Tahoma", Font.BOLD, 18));
+		chckbxShowLevel.setSelected(true);
+		chckbxShowLevel.addActionListener(new ActionListener()
+		{
+			@Override
+			public void actionPerformed(ActionEvent e)
+			{
+				plotLevel.setVisible(chckbxShowLevel.isSelected());
+			}
+		});
+		GridBagConstraints gbc_chckbxShowLevel = new GridBagConstraints();
+		gbc_chckbxShowLevel.gridx = 1;
+		gbc_chckbxShowLevel.gridy = 1;
+		controllerPanel.add(chckbxShowLevel, gbc_chckbxShowLevel);
+
+		sliderDist = new DecimalSlider(2);
+		sliderDist.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		sliderDist.setDecimalSliderValue(1d);
 		sliderDist.setDecimalSliderMinimum(0d);
 		sliderDist.setDecimalSliderMaximum(5d);
@@ -134,7 +176,7 @@ public class MainGUI
 		sliderDist.setDecimalSliderMinorTickSpacing(0.1d);
 		sliderDist.setPaintTicks(true);
 		sliderDist.setPaintLabels(true);
-		sliderDist.setPrecision(1);
+		sliderDist.setPrecision(2);
 		sliderDist.setOrientation(SwingConstants.VERTICAL);
 		GridBagConstraints gbc_slider_1 = new GridBagConstraints();
 		gbc_slider_1.fill = GridBagConstraints.BOTH;
@@ -144,6 +186,7 @@ public class MainGUI
 		panel.add(sliderDist, gbc_slider_1);
 
 		JTabbedPane displayPanel = new JTabbedPane();
+		displayPanel.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		GridBagConstraints gbc_displayPanel = new GridBagConstraints();
 		gbc_displayPanel.fill = GridBagConstraints.BOTH;
 		gbc_displayPanel.gridx = 1;
@@ -152,11 +195,7 @@ public class MainGUI
 
 		canvasDoppler = new DynamicCanvas();
 		canvasDoppler.setBackground(Color.WHITE);
-		displayPanel.addTab("Dopplereffekt", null, canvasDoppler, null);
-
-		canvasLevel = new DynamicCanvas();
-		canvasLevel.setBackground(Color.WHITE);
-		displayPanel.addTab("Pegel\u00E4nderung", null, canvasLevel, null);
+		displayPanel.addTab("Dopplereffekt / Pegel\u00E4nderung", null, canvasDoppler, null);
 
 		MathFunction2D funcDoppler = new MathFunction2D()
 		{
@@ -172,6 +211,10 @@ public class MainGUI
 			@Override
 			public double y(double x)
 			{
+				// if (x < -8)
+				// {
+				// return Double.NaN;
+				// }
 				if (x < -d * sliderDist.getDecimalSliderValue())
 				{
 					return hoch;
@@ -191,9 +234,8 @@ public class MainGUI
 			}
 		};
 
-		DynamicFunctionPlot plotDoppler = new DynamicFunctionPlot(Color.BLUE, false,
-				new ImmutablePair<Double, Double>(-10d, 10d),
-				new BasicStroke(2, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND), 0, funcDoppler);
+		plotDoppler = new DynamicFunctionPlot(new Color(0x4484cd), false, new ImmutablePair<Double, Double>(-15d, 15d),
+				new BasicStroke(5, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND), 0, funcDoppler);
 
 		canvasDoppler.addObject(plotDoppler);
 
@@ -243,39 +285,37 @@ public class MainGUI
 			}
 		};
 
-		DynamicFunctionPlot plotLevel = new DynamicFunctionPlot(Color.RED, false,
-				new ImmutablePair<Double, Double>(-10d, 10d),
-				new BasicStroke(2, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND), 500, funcLevel);
+		plotLevel = new DynamicFunctionPlot(new Color(0xdc5959), false, new ImmutablePair<Double, Double>(-40d, 40d),
+				new BasicStroke(5, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND), 0, funcLevel);
 
-		// canvasDoppler.addObject(plotLevel);
-		canvasLevel.addObject(plotLevel);
+		canvasDoppler.addObject(plotLevel);
 
-		MathFunction2D tempFunc = new MathFunction2D()
-		{
-
-			@Override
-			public double y(double x)
-			{
-				return 2 * x * x * x - 3 * x * x + 1;
-			}
-		};
-		DynamicFunctionPlot plotTemp = new DynamicFunctionPlot(Color.MAGENTA, false,
-				new ImmutablePair<Double, Double>(0d, 1d),
-				new BasicStroke(2, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND), 100, tempFunc);
-		// canvasDoppler.addObject(plotTemp);
-
-		MathFunction2D tempFunc2 = new MathFunction2D()
-		{
-
-			@Override
-			public double y(double x)
-			{
-				return Math.cos(200 * Math.PI * x);
-			}
-		};
-		DynamicFunctionPlot plotTemp2 = new DynamicFunctionPlot(Color.GREEN, false,
-				new ImmutablePair<Double, Double>(0d, 0.5d),
-				new BasicStroke(2, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND), 1000, tempFunc2);
+		// MathFunction2D tempFunc = new MathFunction2D()
+		// {
+		//
+		// @Override
+		// public double y(double x)
+		// {
+		// return 2 * x * x * x - 3 * x * x + 1;
+		// }
+		// };
+		// DynamicFunctionPlot plotTemp = new DynamicFunctionPlot(Color.MAGENTA, false,
+		// new ImmutablePair<Double, Double>(0d, 1d),
+		// new BasicStroke(2, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND), 100, tempFunc);
+		// // canvasDoppler.addObject(plotTemp);
+		//
+		// MathFunction2D tempFunc2 = new MathFunction2D()
+		// {
+		//
+		// @Override
+		// public double y(double x)
+		// {
+		// return Math.cos(200 * Math.PI * x);
+		// }
+		// };
+		// DynamicFunctionPlot plotTemp2 = new DynamicFunctionPlot(Color.GREEN, false,
+		// new ImmutablePair<Double, Double>(0d, 0.5d),
+		// new BasicStroke(2, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND), 1000, tempFunc2);
 		// canvasDoppler.addObject(plotTemp2);
 
 	}

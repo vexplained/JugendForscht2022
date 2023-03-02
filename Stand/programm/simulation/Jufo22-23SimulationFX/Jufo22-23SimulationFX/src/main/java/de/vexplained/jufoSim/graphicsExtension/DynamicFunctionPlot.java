@@ -195,7 +195,7 @@ public class DynamicFunctionPlot extends DynamicObject
 		Path2D.Double funcPath = new Path2D.Double(Path2D.WIND_NON_ZERO, this.functionArrayBuffer[0].length);
 
 		double prevX = mapToRange(this.functionArrayBuffer[0][0], minValueX, maxValueX, canvasMinX, canvasMaxX - 1);
-		double prevY = mapToRange(this.functionArrayBuffer[1][1], minValueY, maxValueY, canvasMinY, canvasMaxY - 1);
+		double prevY = mapToRange(this.functionArrayBuffer[1][0], minValueY, maxValueY, canvasMinY, canvasMaxY - 1);
 		funcPath.moveTo(prevX, prevY);
 		for (int i = 1; i < this.functionArrayBuffer[0].length; i++)
 		{
@@ -205,9 +205,16 @@ public class DynamicFunctionPlot extends DynamicObject
 			double midX = (xPos + prevX) / 2d;
 			double midY = (yPos + prevY) / 2d;
 
-			// smooth out using a Bezier curve
-			// @see https://stackoverflow.com/a/34571723/19474335
-			funcPath.quadTo(prevX, prevY, midX, midY);
+			if (!Double.isNaN(yPos))
+			{
+				// if (!Double.isNaN(prevY))
+				// {
+				// funcPath.moveTo(prevX, prevY);
+				// }
+				// smooth out using a Bezier curve
+				// @see https://stackoverflow.com/a/34571723/19474335
+				funcPath.quadTo(prevX, prevY, midX, midY);
+			}
 
 			prevX = xPos;
 			prevY = yPos;
@@ -231,6 +238,10 @@ public class DynamicFunctionPlot extends DynamicObject
 	 */
 	private double mapToRange(double value, double valMin, double valMax, double outMin, double outMax)
 	{
+		if (Double.isNaN(value))
+		{
+			return Double.NaN;
+		}
 		return (outMax - outMin) * (value - valMin) / (valMax - valMin) + outMin;
 	}
 
